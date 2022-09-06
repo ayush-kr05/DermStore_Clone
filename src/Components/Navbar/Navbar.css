@@ -124,6 +124,7 @@
   flex-wrap: wrap;
   margin-left: 30px;
   align-items: center;
+  position: relative;
 }
 
 .dropBox_lowNav {
@@ -138,7 +139,6 @@
   position: absolute;
   padding: 3%;
   height: fit-content;
-  margin-top: -5px;
   width: min-content;
   width: 50%;
   display: flex;
@@ -150,6 +150,7 @@
   float: left;
   color: black;
   top: 175px;
+  top: 33px;
 }
 
 #drop_2 {
@@ -160,7 +161,7 @@
   position: absolute;
   padding: 2%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   width: min-content;
   width: 75%;
   display: flex;
@@ -169,7 +170,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 
 #drop_4 {
@@ -180,7 +180,7 @@
   position: absolute;
   padding: 2%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   width: min-content;
   width: 60%;
   flex-wrap: wrap;
@@ -189,7 +189,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 
 #drop_5 {
@@ -200,7 +199,7 @@
   position: absolute;
   padding: 2%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   background-color: rgba(255, 255, 255);
   width: min-content;
   width: 54%;
@@ -209,7 +208,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 
 #drop_6 {
@@ -220,7 +218,7 @@
   position: absolute;
   padding: 2%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   background-color: rgba(255, 255, 255);
   width: min-content;
   width: 51%;
@@ -229,7 +227,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 
 #drop_7 {
@@ -241,7 +238,7 @@
   padding: 2%;
   height: fit-content;
   background-color: rgba(255, 255, 255);
-  margin-top: 0px;
+  top: 33px;
   width: min-content;
   width: 45%;
   flex-wrap: wrap;
@@ -249,7 +246,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 #drop_8 {
   display: flex;
@@ -259,7 +255,7 @@
   position: absolute;
   padding: 2%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   width: min-content;
   background-color: rgba(255, 255, 255);
   width: 34%;
@@ -268,7 +264,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 #drop_9 {
   display: flex;
@@ -277,7 +272,7 @@
   position: absolute;
   padding: 0.5%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   width: min-content;
   width: 14%;
   flex-wrap: wrap;
@@ -286,7 +281,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 
 #drop_12 {
@@ -296,7 +290,7 @@
   position: absolute;
   padding: 0.5%;
   height: fit-content;
-  margin-top: 0px;
+  top: 33px;
   background-color: rgba(255, 255, 255);
   width: min-content;
   width: 14%;
@@ -305,7 +299,6 @@
   letter-spacing: 0.1px;
   float: left;
   color: rgb(71, 71, 71);
-  top: 175px;
 }
 
 .lower_navbar a {
