@@ -323,7 +323,7 @@
   align-items: center;
   font-size: 15px;
   margin: auto;
-  width: 90%;
+  width: 92%;
 }
 
 .bottom-heading {
@@ -344,4 +344,13 @@
 .bottom-heading:hover {
   background-color: rgba(153, 153, 153, 0.437);
   color: black;
+}
+
+@media only screen and (max-width: 912px) {
+  .navbarSection,
+  .offers,
+  .ContryDiv,
+  .bottom-heading {
+    display: none;
+  }
 }

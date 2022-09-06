@@ -678,7 +678,7 @@ export const Navbar = () => {
                 alt=""
               />
             </li>
-            <li>New customers save 15% with code WELCOME15</li>
+            <li>New Customers save 15% </li>
           </ul>
           <ul
             style={{
@@ -695,7 +695,7 @@ export const Navbar = () => {
                 alt=""
               />
             </li>
-            <li>Redeem Dermstore Rewards</li>
+            <li>Dermstore Rewards</li>
           </ul>
           {/*  */}
           <ul
@@ -758,6 +758,12 @@ export const Navbar = () => {
         15% off SkinMedica + 20% off when you subscribe. Receive a Skinmedica
         Lytera 0.30 oz ($36 value) when you spend $160 or more on the brand.
       </div>
+
+      {/*-------------------------- Responsive Navbar------------------------ */}
+
+      <section className="navRes_Section">
+        <div></div>
+      </section>
     </>
   );
 };
