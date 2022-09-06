@@ -27,6 +27,7 @@
 .searchBar {
   display: flex;
   /* align-items: center; */
+  position: relative;
   justify-content: center;
   width: 55%;
 }
@@ -71,6 +72,8 @@
   border: 1px solid grey;
   position: absolute;
   padding-bottom: 20px;
+  background-color: white;
+  z-index: 1;
 }
 
 .OnlogoutDropdown :first-child {
@@ -344,6 +347,29 @@
 .bottom-heading:hover {
   background-color: rgba(153, 153, 153, 0.437);
   color: black;
+}
+
+.searchResult_Div {
+  position: absolute;
+  width: 63%;
+  min-height: 280px;
+  top: 40px;
+  left: 137px;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(240, 248, 248);
+  padding: 0 5px;
+  overflow-y: hidden;
+  /* display: none; */
+}
+.searchResult_Div > div {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.searchResult_Div img {
+  width: 50px;
 }
 
 @media only screen and (max-width: 912px) {
