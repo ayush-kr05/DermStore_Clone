@@ -1,0 +1,86 @@
+[
+	{
+		"id": 1,
+		"to": "/productPage",
+		"title": "Face",
+
+		"products": [
+			{ "id": 1, "title": "SkinCeuticals", "to": "/productPage" },
+			{ "id": 2, "title": "EltaMD", "to": "/productPage" },
+			{ "id": 3, "title": "SkinMedica", "to": "/productPage" },
+
+			{ "id": 4, "title": "Obagi", "to": "/productPage" },
+			{ "id": 5, "title": "iS Clinical", "to": "/productPage" },
+			{ "id": 6, "title": "Eminence Organic", "to": "/productPage" },
+			{ "id": 7, "title": "Revision Skincare", "to": "/productPage" },
+			{ "id": 8, "title": "Neocutis", "to": "/productPage" }
+		]
+	},
+	{
+		"id": 2,
+		"to": "/productPage",
+		"title": "Lips",
+
+		"products": [
+			{ "id": 1, "title": "Lipstick", "to": "/productPage" },
+			{ "id": 2, "title": "Acne Scars", "to": "/productPage" },
+			{ "id": 3, "title": "Aging Skin", "to": "/productPage" },
+
+			{ "id": 4, "title": "Blackheads", "to": "/productPage" }
+		]
+	},
+	{
+		"id": 3,
+		"to": "/productPage",
+		"title": "Eyes",
+
+		"products": [
+			{ "id": 1, "title": "Acene-Prone Skin", "to": "/productPage" },
+			{ "id": 2, "title": "Sensitive Skin", "to": "/productPage" },
+			{ "id": 3, "title": "Dry Skin", "to": "/productPage" },
+
+			{ "id": 4, "title": "Mature Skin", "to": "/productPage" },
+
+			{ "id": 5, "title": "Combination Skin", "to": "/productPage" },
+			{ "id": 6, "title": "Oily Skin", "to": "/productPage" },
+
+			{ "id": 7, "title": "Normal Skin", "to": "/productPage" },
+			{ "id": 8, "title": "Blackheads", "to": "/productPage" }
+		]
+	},
+	{
+		"id": 4,
+		"to": "/productPage",
+		"title": "More",
+		"products": [
+			{ "id": 1, "title": "Vitamin C", "to": "/productPage" },
+			{ "id": 2, "title": "Hyaluronic Acid", "to": "/productPage" },
+			{ "id": 3, "title": "Retinol", "to": "/productPage" },
+
+			{ "id": 4, "title": "Antioxidants", "to": "/productPage" },
+
+			{ "id": 5, "title": "Zinc Oxide", "to": "/productPage" },
+			{ "id": 6, "title": "Niacinamide", "to": "/productPage" },
+
+			{ "id": 7, "title": "Peptides", "to": "/productPage" },
+
+			{ "id": 8, "title": "Glycolic Acid", "to": "/productPage" }
+		]
+	},
+	{
+		"id": 5,
+		"to": "/productPage",
+		"title": "Popular Brands",
+		"products": [
+			{ "id": 1, "title": "Sulwhasoo", "to": "/productPage" },
+			{ "id": 2, "title": "Me", "to": "/productPage" },
+			{ "id": 3, "title": "lluminage", "to": "/productPage" },
+
+			{ "id": 4, "title": "ghd", "to": "/productPage" },
+			{ "id": 5, "title": "Modik8", "to": "/productPage" },
+			{ "id": 6, "title": "Volition Beauty", "to": "/productPage" },
+			{ "id": 7, "title": "Nurse Jamie", "to": "/productPage" },
+			{ "id": 8, "title": "NION Beauty", "to": "/productPage" }
+		]
+	}
+]
