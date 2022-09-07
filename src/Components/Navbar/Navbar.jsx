@@ -33,15 +33,17 @@ export const Navbar = () => {
   function handleSearch(e) {
     setSearchParam(e.target.value);
     let timeId;
+    let srhdivId;
 
     let debounce = () => {
       if (timeId) {
         clearTimeout(timeId);
+        clearTimeout(srhdivId);
       }
       timeId = setTimeout(() => {
         getSearchData(searchParam);
         setSearchDiv(true);
-        setTimeout(() => {
+        srhdivId = setTimeout(() => {
           setSearchDiv(false);
         }, 3000);
       }, 1000);
