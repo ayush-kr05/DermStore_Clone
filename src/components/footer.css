@@ -129,10 +129,7 @@ ul > li {
 	font-weight: bold;
 	margin-left: 5%;
 }
-.Video1 {
-	/* display: flex; */
-	height: 300px;
-}
+
 .icon {
 	display: flex;
 	gap: 5%;
