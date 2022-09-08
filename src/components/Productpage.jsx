@@ -1,3 +1,7 @@
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
+
+
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
@@ -90,7 +94,7 @@ export const ProductPage = () => {
 	const Sort = (e) => {
 		if (e.target.value == "LTH") {
 			const d = [...items].sort((a, b) => {
-				return Number(a.price) - Number(b.price);
+				return Number(a.mrp) - Number(b.mrp);
 			});
 			console.log(d);
 			setItems(d);
@@ -98,7 +102,7 @@ export const ProductPage = () => {
 
 		if (e.target.value == "HTL") {
 			const d = [...items].sort((a, b) => {
-				return Number(b.price) - Number(a.price);
+				return Number(b.mrp) - Number(a.mrp);
 			});
 			console.log(d);
 			setItems(d);
@@ -109,6 +113,10 @@ export const ProductPage = () => {
 				return a.title > b.title ? 1 : -1;
 			});
 			console.log(d);
+			setItems(d);
+		}
+		if (e.target.value == "dfault"){
+			const d = [...items]
 			setItems(d);
 		}
 	};
@@ -148,10 +156,7 @@ export const ProductPage = () => {
 										key={index}
 										onClick={() => handleItemCategory(e[0])}
 										className="SI">
-										{`${e[0]}`}
-										
-										{/* <button></button> */}
-										
+										{`${e[0]}`}						
 									</div>
 								);
 							})}
@@ -160,7 +165,9 @@ export const ProductPage = () => {
 					<div>
 						<h3>Makeup Category</h3>
 						<hr />
-						<div>
+						<div style={{
+							// paddingLeft:"7px"
+						}}>
 							{makeup.map((e, index) => {
 								return (
 									<div key={index} onClick={() => handleMakeupCategory(e)} className="SI">
@@ -352,8 +359,8 @@ export const ProductPage = () => {
 					</div>
 					<div className="Sortby">
 						<p>Sort by</p>
-						<select onClick={Sort}>
-							<option value="">Default</option>
+						<select defaultValue="dfault" onClick={Sort}>
+							<option value="default">Default</option>
 							{/* <option value="">Bestsellers</option> */}
 							<option value="LTH">Price : Low to High</option>
 							<option value="HTL">Price : High to Low</option>
@@ -409,65 +416,22 @@ export const ProductPage = () => {
 										</div>
 									</div>
 									<div className="TRP">
-										<p>{elem.name}</p>
+										<p>{elem.name.slice(0,30)}...</p>
 										<div
 											style={{
 												display: "flex",
+												alignItems:"center",
 												width: "100px",
 												margin: "auto",
 											}}>
-											{/* <svg
-												style={{ marginTop: "5px" }}
-												xmlns="http://www.w3.org/2000/svg"
-												width="16"
-												height="16"
-												fill="currentColor"
-												className="bi bi-star-fill"
-												viewBox="0 0 16 16">
-												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-											</svg>
-											<svg
-												style={{ marginTop: "5px" }}
-												xmlns="http://www.w3.org/2000/svg"
-												width="16"
-												height="16"
-												fill="currentColor"
-												className="bi bi-star-fill"
-												viewBox="0 0 16 16">
-												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-											</svg>
-											<svg
-												style={{ marginTop: "5px" }}
-												xmlns="http://www.w3.org/2000/svg"
-												width="16"
-												height="16"
-												fill="currentColor"
-												className="bi bi-star-fill"
-												viewBox="0 0 16 16">
-												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-											</svg>
-											<svg
-												style={{ marginTop: "5px" }}
-												xmlns="http://www.w3.org/2000/svg"
-												width="16"
-												height="16"
-												fill="currentColor"
-												className="bi bi-star-fill"
-												viewBox="0 0 16 16">
-												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-											</svg>
-											<svg
-												style={{ marginTop: "5px" }}
-												xmlns="http://www.w3.org/2000/svg"
-												width="16"
-												height="16"
-												fill="currentColor"
-												className="bi bi-star-fill"
-												viewBox="0 0 16 16">
-												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-											</svg> */}
+											
+											 <Stack spacing={0.5}>
+
+												<Rating name="half-rating-read" defaultValue={elem.rating} precision={0.5} readOnly />
+
+											</Stack>
 											<h3>
-												Rating : {elem.rating}
+												{elem.rating}
 											</h3>
 										</div>
 										<h3 name="price" style={{ marginTop: "0px", textAlign : "center" }}>
@@ -481,6 +445,10 @@ export const ProductPage = () => {
 											height: "10%",
 										}}>
 										<button
+											style={{
+												padding:"5px",
+												fontSize:"18px"
+											}}
 											onClick={() => {
 												alert("Added to Cart");
 												getData();

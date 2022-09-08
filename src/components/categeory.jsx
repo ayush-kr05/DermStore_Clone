@@ -1,7 +1,7 @@
 
 export const Categeory = {
     Category : [
-        ["Moisturizers",2],["Face Makeup",4],["Eye Care",3],["Blush",3],["Illamasqua",1],["jane iredale",2],["Jouer Cosmetics",2],["Kevyn Aucoin",1],["Kjaer Weis",5],["Perricone MD",1],["RMS Beauty",2],["Smashbox",2],["Stila",1],["Supergoop!",1],["Tarte",0],["Vapour Beauty",3],
+        ["Moisturizers",2],["Face Makeup",4],["Eye Care",3],["Blush",3],["Face Sun Care",1],["Lip Makeup",2],["Jouer Cosmetics",2],["Kevyn Aucoin",1],["Kjaer Weis",5],["Perricone MD",1],["RMS Beauty",2],["Smashbox",2],["Stila",1],["Supergoop!",1],["Tarte",0],["Vapour Beauty",3],
     ],
     Makeup_Category : [
          "Lips","Makeup", "Eyes","Palettes","Complexion"
