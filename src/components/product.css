@@ -41,6 +41,9 @@
     margin-top: 2%;
 }
 
+.ok{
+    /* background-color: blue; */
+}
 
 
 
@@ -134,5 +137,6 @@
     min-height: 30%;
 }
 
-/* button
+button{
     /* background-color: red; */
+}
