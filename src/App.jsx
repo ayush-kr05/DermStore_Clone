@@ -1,5 +1,5 @@
 import "./App.css";
-// import { Navbar } from "./Components/Navbar/Navbar";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./Pages/Home/Home";
 import { Product } from "./Pages/Product/Product";
@@ -13,7 +13,6 @@ function App() {
         <Route path="/products" element={<Product />}></Route>
         <Route path="/products/:id" element={<ProductOverview />}></Route>
       </Routes>
-      <div style={{ height: "500px" }}>Gapping only</div>
     </div>
   );
 }

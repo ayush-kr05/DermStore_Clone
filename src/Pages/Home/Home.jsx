@@ -10,6 +10,7 @@ import { NowTrending } from "./NowTrending";
 import { FeaturedBrand } from "./FeaturedBrand";
 import ReactPlayer from "react-player";
 import { FromBlogs } from "./FromBlogs";
+import { Footer } from "../../Components/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -114,6 +115,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
