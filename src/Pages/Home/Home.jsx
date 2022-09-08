@@ -18,7 +18,7 @@ export const Home = () => {
       <Navbar />
       <section className="homeSection">
         {/* -----------------{Part 1} -------------------*/}
-        <div>
+        <div className="CaroselDivMain">
           <HomeCarosel />
         </div>
         {/* -----------------{Part 2} -------------------*/}

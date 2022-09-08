@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { ResNavBar } from "./ResNavBar";
 
 import dropOneData from "./utils/dropdownOne.json";
 import dropTwoData from "./utils/dropdownTwo.json";
@@ -12,6 +13,8 @@ import dropEightData from "./utils/dropdownEight.json";
 import dropNineData from "./utils/dropdownNine.json";
 import dropTwelveData from "./utils/dropdownTwelve.json";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContextProvider";
 
 export const Navbar = () => {
   const [searchParam, setSearchParam] = React.useState("");
@@ -28,7 +31,7 @@ export const Navbar = () => {
   const [dropdown9, setDropdown9] = React.useState(false);
   const [dropdown12, setDropdown12] = React.useState(false);
   const navigate = useNavigate();
-  const isAuth = false;
+  const { isAuth } = useContext(AuthContext);
 
   function handleSearch(e) {
     setSearchParam(e.target.value);
@@ -59,7 +62,14 @@ export const Navbar = () => {
   };
 
   const showProductDetails = (id) => {
-    navigate(`products/${id}`);
+    navigate(`/products/${id}`);
+  };
+
+  const handleLogin = () => {
+    navigate("/login");
+  };
+  const handleRegister = () => {
+    navigate("/signUp");
   };
 
   // console.log(searchData);
@@ -139,7 +149,9 @@ export const Navbar = () => {
               {searchDiv && (
                 <div className="searchResult_Div">
                   {searchData.map((elm) => {
-                    console.log(elm);
+                    {
+                      /* console.log(elm); */
+                    }
                     return (
                       <div
                         key={elm.id}
@@ -204,7 +216,15 @@ export const Navbar = () => {
                 isAuth ? (
                   <div class="OnloginDropdown">
                     <div class="logButtDiv">
-                      <button className="loglot">Logout</button>
+                      <button
+                        className="loglot"
+                        onClick={() => {
+                          localStorage.removeItem("userToken");
+                          window.location.reload();
+                        }}
+                      >
+                        Logout
+                      </button>
                     </div>
 
                     <Link to="/wishlist">My Favorites</Link>
@@ -215,8 +235,12 @@ export const Navbar = () => {
                 ) : (
                   <div class="OnlogoutDropdown">
                     <div class="logButtDiv">
-                      <button className="loglot">Login</button>
-                      <button className="logreg">Register</button>
+                      <button className="loglot" onClick={handleLogin}>
+                        Login
+                      </button>
+                      <button className="logreg" onClick={handleRegister}>
+                        Register
+                      </button>
                     </div>
 
                     <Link to="/wishlist">My Favorites</Link>
@@ -719,7 +743,7 @@ export const Navbar = () => {
             style={{
               display: "flex",
               justifyContent: "space-around",
-              width: "28%",
+              width: "17%",
             }}
           >
             <li>
@@ -791,7 +815,7 @@ export const Navbar = () => {
             style={{
               display: "flex",
               justifyContent: "space-around",
-              width: "13%",
+              width: "16%",
             }}
           >
             <li>
@@ -814,7 +838,9 @@ export const Navbar = () => {
       {/*-------------------------- Responsive Navbar------------------------ */}
 
       <section className="navRes_Section">
-        <div></div>
+        <div>
+          <ResNavBar />
+        </div>
       </section>
     </>
   );

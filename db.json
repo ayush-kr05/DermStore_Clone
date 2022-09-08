@@ -306,7 +306,7 @@
       "complexion_format": "Stick",
       "complexion_coverage": "Medium",
       "makeup_category": "Makeup",
-      "rating": 5.0,
+      "rating": 5,
       "review_count": 355,
       "mrp": 66,
       "offer_price": 43,
@@ -673,10 +673,50 @@
       "item_stock": "true"
     }
   ],
-  "users": [
+  "usersInfo": [
     {
-      "name": "Ayush Kumar",
-      "email": "email"
+      "fullName": "Md Talib Ansari",
+      "email": "mdtalibansari55048@gmail.com",
+      "confirmEmail": "mdtalibansari55048@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "mobile": "08340595343",
+      "referralCode": "",
+      "reward": true,
+      "id": 1
+    },
+    {
+      "fullName": "TALIB ALI",
+      "email": "taalibullah786@gmail.com",
+      "confirmEmail": "taalibullah786@gmail.com",
+      "password": "1234567890",
+      "confirmPassword": "1234567890",
+      "mobile": "8084703458",
+      "referralCode": "12345q",
+      "reward": true,
+      "id": 2
+    },
+    {
+      "fullName": "Ayush Kumar",
+      "email": "ayushkumar@gmail.com",
+      "confirmEmail": "ayushkumar@gmail.com",
+      "password": "1234567",
+      "confirmPassword": "1234567",
+      "mobile": "08340595343",
+      "referralCode": "",
+      "reward": true,
+      "id": 3
+    },
+    {
+      "fullName": "Ayush Kumar",
+      "email": "ayushkumar.barbighaiya@gmail.com",
+      "confirmEmail": "ayushkumar.barbighaiya@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "mobile": "7004012768",
+      "referralCode": "",
+      "reward": true,
+      "id": 4
     }
   ]
 }

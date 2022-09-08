@@ -5,7 +5,7 @@ import "./footer.css";
 
 export const Footer = () => {
   // const navigate = useNavigate()
-  console.log("hello");
+  // console.log("hello");
 
   return (
     <section className="FooterMainSection">

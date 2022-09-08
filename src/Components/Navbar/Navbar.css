@@ -420,6 +420,9 @@
 .searchResult_Div img {
   width: 50px;
 }
+.navRes_Section {
+  display: none;
+}
 
 @media only screen and (max-width: 912px) {
   .navbarSection,
@@ -427,5 +430,17 @@
   .ContryDiv,
   .bottom-heading {
     display: none;
+  }
+
+  .navRes_Section {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    background-color: white;
+  }
+  .AppBarRes {
+    background-color: white;
+    justify-content: space-around;
   }
 }

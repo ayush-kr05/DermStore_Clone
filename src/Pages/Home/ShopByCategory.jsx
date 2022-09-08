@@ -49,7 +49,10 @@ export const ShopByCategory2 = () => {
   return (
     <>
       <div>
-        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/54/0826-STDCRE-40745-DS-EF-Sept-Batch-SHOT34-HP_LPSQ_BANNER_676x556-044054.jpg" />
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/208-us/54/0826-STDCRE-40745-DS-EF-Sept-Batch-SHOT34-HP_LPSQ_BANNER_676x556-044054.jpg"
+          alt="prod"
+        />
         <h4>New from HoliFrog</h4>
         <p>
           Helps strengthen & resurface for smoother, brighter & firmer-looking
@@ -57,14 +60,20 @@ export const ShopByCategory2 = () => {
         </p>
       </div>
       <div>
-        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/58/0826-STDCRE-40745-DS-EF-Sept-Batch-SHOT28-HP_LPSQ_BANNER_676x556-043258.jpg" />
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/208-us/58/0826-STDCRE-40745-DS-EF-Sept-Batch-SHOT28-HP_LPSQ_BANNER_676x556-043258.jpg"
+          alt="prod"
+        />
         <h4>New from Elemis</h4>
         <p>
           Helps reduce visible signs of discoloration while promoting radiance.
         </p>
       </div>
       <div>
-        <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/38/EltaMD_676x556-041438.png" />
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/208-us/38/EltaMD_676x556-041438.png"
+          alt="prod"
+        />
         <h4>New from EltaMD</h4>
         <p>
           Helps strengthen skin, visibly reduces the look of redness, & leaves a

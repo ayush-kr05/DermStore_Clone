@@ -131,4 +131,25 @@
     padding: 5px 10px;
     margin: 14px 0;
   }
+  .FeaturedBrandDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 15px;
+  }
+  .FeaturedBrandDiv > div {
+    margin-bottom: 15px;
+  }
+  .FromTheBlogDiv {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 40px;
+  }
+  .CaroselDivMain {
+    margin-top: 60px;
+  }
+  .NowTrendingDiv {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
