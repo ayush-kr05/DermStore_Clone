@@ -1,0 +1,261 @@
+/* #navbar{
+    position:absolute;
+} */
+@import "./reset.css";
+
+* {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+}
+body {
+	width: 100vw;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+ul {
+	list-style: none;
+}
+#drop_login {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	position: absolute;
+	padding: 1.7% 0% 0% 0%;
+
+	height: fit-content;
+	margin-top: 0px;
+	background-color: rgba(255, 255, 255);
+	width: min-content;
+	width: 17.5%;
+	flex-wrap: wrap;
+
+	display: flex;
+	justify-content: flex-start;
+	letter-spacing: 0.1px;
+	float: left;
+	color: rgb(71, 71, 71);
+	top: 90px;
+}
+.loginButton {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	color: #000;
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	background-color: #222;
+	color: #fff;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #222;
+	border-radius: 1px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	padding: 9.6px 80px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.loginButton:hover {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	background-color: rgb(110, 103, 103);
+	color: #fff;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #222;
+	border-radius: 1px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	padding: 9.6px 80px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.logoutButton {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	color: rgb(108, 100, 100);
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	background-color: rgb(142, 134, 134);
+	color: #fff;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #222;
+	border-radius: 1px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	padding: 9.6px 72px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.logoutButton:hover {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	background-color: rgb(43, 41, 41);
+	color: #fff;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #222;
+	border-radius: 1px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	padding: 9.6px 72px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.registerButton {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	background-color: white;
+	color: black;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #222;
+	border-radius: 1px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	padding: 9.6px 66px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.registerButton:hover {
+	font-family: "lato regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	background-color: #cccccc;
+	color: black;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #222;
+	border-radius: 1px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	padding: 9.6px 66px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.emptyDiv {
+	background-color: #f2f2f2;
+	height: 33px;
+}
+.hr {
+	border-bottom: 1px solid lightgrey;
+	padding-top: 18px;
+}
+#logoMenu {
+	margin-top: 10px;
+	font-size: 15px;
+	text-decoration: none;
+	padding: 20px 30px 20px 12px;
+	color: black;
+}
+#logoMenu:hover {
+	margin-top: 10px;
+	align-items: center;
+	color: black;
+	text-decoration: none;
+	font-size: 15px;
+	padding: 20px 30px 20px 12px;
+	background-color: lightgrey;
+}
+.link {
+	text-decoration: none;
+	font-size: 14px;
+	color: #000;
+	padding: 10px 15px;
+	
+}
+.link:hover {
+	background: transparent;
+	text-decoration: none;
+	font-size: 14px;
+	background-color: #f2f2f2;
+	padding: 10px 15px;
+
+}
+
+
+.center {
+	text-align: center;
+}
+.flex {
+	display: flex;
+}
+
+.bold_letters {
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#upper_navbar {
+	display: flex;
+	justify-content: space-around;
+	padding: 1.5%;
+}
+
+#logos {
+	display: flex;
+	width: 25%;
+	justify-content: space-around;
+	line-height: 0px;
+	margin-bottom: 0px;
+}
+
+#inside_upper_navbar {
+	display: flex;
+	height: 40px;
+	width: 100%;
+	justify-content: space-around;
+}
