@@ -6,6 +6,10 @@ import { HomeCarosel } from "./HomeCarosel";
 import { SlidingProducts } from "./SlidingProducts";
 import { ShopByCategory, ShopByCategory2 } from "./ShopByCategory";
 import { SmallSlider } from "./SmallSlider";
+import { NowTrending } from "./NowTrending";
+import { FeaturedBrand } from "./FeaturedBrand";
+import ReactPlayer from "react-player";
+import { FromBlogs } from "./FromBlogs";
 
 export const Home = () => {
   return (
@@ -13,20 +17,15 @@ export const Home = () => {
       <Navbar />
       <section className="homeSection">
         {/* -----------------{Part 1} -------------------*/}
-
         <div>
           <HomeCarosel />
         </div>
-
         {/* -----------------{Part 2} -------------------*/}
-
         <div>
           <h3>Best Sellers</h3>
           <SlidingProducts />
         </div>
-
         {/* -----------------{Part 3} -------------------*/}
-
         <div>
           <h3>3x Points on Sunday Riley</h3>
           <p>
@@ -43,7 +42,6 @@ export const Home = () => {
             <SmallSlider />
           </div>
         </div>
-
         {/* -----------------{Part 4} -------------------*/}
         <div className="SingleImmg">
           <Link to="/products">
@@ -53,9 +51,7 @@ export const Home = () => {
             />
           </Link>
         </div>
-
         {/* -----------------{Part 5} -------------------*/}
-
         <div>
           <h3>Shop By Category</h3>
           <div className="shop_category">
@@ -65,8 +61,57 @@ export const Home = () => {
             <ShopByCategory2 />
           </div>
         </div>
+        {/* -----------------{Part 6} -------------------*/}
         <div>
           <SlidingProducts />
+        </div>
+        {/* -----------------{Part 7} -------------------*/}
+        <div>
+          <h3>Now Trending</h3>
+          <div className="NowTrendingDiv">
+            <NowTrending />
+          </div>
+        </div>
+        {/* -----------------{Part 8} -------------------*/}
+        <div>
+          <h3>Featured Brands</h3>
+          <div className="FeaturedBrandDiv">
+            <FeaturedBrand />
+          </div>
+        </div>
+        {/* -----------------{Part 9} -------------------*/}
+        <div className="VideoDiv">
+          <ReactPlayer
+            width="100%"
+            height="600px"
+            controls
+            url="https://s1.thcdn.com/productvideo/12902717/dermstore_60sec_16x9_new.mp4"
+          />
+          <h4 style={{ marginTop: "40px", marginBottom: "20px" }}>
+            #MyDermstoreGlow
+          </h4>
+          <p style={{ marginBottom: "40px" }}>
+            We care about what goes on your skin, because of what’s within. Our
+            assortment is top-rated, curated & authenticated—bringing you the
+            highest quality products and straight-from-the-experts info to help
+            you navigate all things beauty and skin care. Join the conversation
+            on Instagram with #MyDermstoreGlow—show us your favorite #Dermstore
+            finds that help you care for the skin you’re in! We’re excited to
+            feature our community’s must-haves all season long.
+          </p>
+          <div className="SingleImmg">
+            <img
+              src="https://static.thcdn.com/images/large/webp/widgets/208-us/06/original-6-055106.png"
+              alt="banner"
+            />
+          </div>
+        </div>
+        {/* -----------------{Part 10} -------------------*/}
+        <div>
+          <h3> From The Blog</h3>
+          <div className="FromTheBlogDiv">
+            <FromBlogs />
+          </div>
         </div>
       </section>
     </>

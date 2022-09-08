@@ -13,7 +13,7 @@ export const HomeCarosel = () => {
           alt="First slide"
         />
         <Carousel.Caption className="CrouselText">
-          <h1 className="h1carosal">First slide label</h1>
+          <h1 className="h1carosal">Introducing Chantecaille</h1>
           <p className="h1carosal">
             Nulla vitae elit libero, a pharetra augue mollis interdum.
           </p>
@@ -39,7 +39,7 @@ export const HomeCarosel = () => {
           alt="Third slide"
         />
         <Carousel.Caption className="CrouselText">
-          <h1 className="h1carosal">Third slide label</h1>
+          <h1 className="h1carosal"> SkinCeuticals Nisl Consectetur</h1>
           <p className="h1carosal">
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
@@ -52,7 +52,7 @@ export const HomeCarosel = () => {
           alt="Third slide"
         />
         <Carousel.Caption className="CrouselText">
-          <h1 className="h1carosal">Forth slide label</h1>
+          <h1 className="h1carosal"> Praesent cursus magna</h1>
           <p className="h1carosal">
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>

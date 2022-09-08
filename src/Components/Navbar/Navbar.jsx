@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { Button, ButtonOpp } from "./utils/Button";
+
 import dropOneData from "./utils/dropdownOne.json";
 import dropTwoData from "./utils/dropdownTwo.json";
 import dropFourData from "./utils/dropdownFour.json";
@@ -203,28 +203,26 @@ export const Navbar = () => {
               {showLoginDrop ? (
                 isAuth ? (
                   <div class="OnloginDropdown">
-                    <div>
-                      <Button>Logout</Button>
+                    <div class="logButtDiv">
+                      <button className="loglot">Logout</button>
                     </div>
-                    <div>
-                      <Link to="/wishlist">My Favorites</Link>
-                      <Link to="/cart">My Orders</Link>
-                      <Link to="/">My Wishlist</Link>
-                      <Link to="/">Your Referals</Link>
-                    </div>
+
+                    <Link to="/wishlist">My Favorites</Link>
+                    <Link to="/cart">My Orders</Link>
+                    <Link to="/">My Wishlist</Link>
+                    <Link to="/">Your Referals</Link>
                   </div>
                 ) : (
                   <div class="OnlogoutDropdown">
-                    <div>
-                      <Button>Login</Button>
-                      <ButtonOpp>Register</ButtonOpp>
+                    <div class="logButtDiv">
+                      <button className="loglot">Login</button>
+                      <button className="logreg">Register</button>
                     </div>
-                    <div>
-                      <Link to="/wishlist">My Favorites</Link>
-                      <Link to="/cart">My Orders</Link>
-                      <Link to="/">My Wishlist</Link>
-                      <Link to="/">Your Referals</Link>
-                    </div>
+
+                    <Link to="/wishlist">My Favorites</Link>
+                    <Link to="/cart">My Orders</Link>
+                    <Link to="/">My Wishlist</Link>
+                    <Link to="/">Your Referals</Link>
                   </div>
                 )
               ) : (

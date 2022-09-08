@@ -68,7 +68,7 @@
 .account_opt {
   width: 18%;
 }
-.OnlogoutDropdown,
+/* .OnlogoutDropdown,
 .OnloginDropdown {
   border: 1px solid grey;
   position: absolute;
@@ -99,6 +99,52 @@
 .OnloginDropdown :last-child {
   display: flex;
   flex-direction: column;
+} */
+
+.OnlogoutDropdown,
+.OnloginDropdown {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  width: 350px;
+}
+.logButtDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.loglot {
+  background-color: #222;
+  padding: 5px;
+  font-size: 18px;
+  color: white;
+}
+.loglot:hover {
+  background-color: rgb(85, 82, 82);
+}
+.logreg {
+  padding: 5px;
+  font-size: 18px;
+}
+.logreg:hover {
+  background-color: rgb(196, 191, 191);
+}
+
+.OnlogoutDropdown a,
+.OnloginDropdown a {
+  text-decoration: none;
+  padding: 4px 10px;
+  color: black;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.OnlogoutDropdown a:hover,
+.OnloginDropdown a:hover {
+  background-color: grey;
+  color: white;
 }
 
 .cart_option {
