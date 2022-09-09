@@ -165,8 +165,7 @@ export const SignUp = () => {
                   type="checkbox"
                   name="reward"
                   id="check"
-                  required
-                />
+                  required />
                 <span>
                   <p id="paracheck">
                     Include me in the Dermstore Rewards program Read our terms
