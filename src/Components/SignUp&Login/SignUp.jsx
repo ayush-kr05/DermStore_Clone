@@ -49,8 +49,7 @@ export const SignUp = () => {
               width="200"
               color="#222222"
               viewBox="0 0 259 64"
-              className="headerLogo"
-            >
+              className="headerLogo">
               <g fill="currentColor" fillRule="evenodd">
                 <g fill="currentColor" fillRule="nonzero">
                   <g>
