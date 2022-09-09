@@ -35,13 +35,12 @@ export const SignUp = () => {
 
   return (
     <div>
-      <div
-        id="main"
+      <div 
+         id="main"
         style={{
           paddingTop: "0px",
           marginTop: "5px",
-        }}
-      >
+        }}>
         <Link to="/">
           <div id="nav1">
             <svg
