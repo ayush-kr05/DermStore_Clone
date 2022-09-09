@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { ResNavBar } from "./ResNavBar";
+import { useSelector } from "react-redux";
 
 import dropOneData from "./utils/dropdownOne.json";
 import dropTwoData from "./utils/dropdownTwo.json";
@@ -32,6 +33,7 @@ export const Navbar = () => {
   const [dropdown12, setDropdown12] = React.useState(false);
   const navigate = useNavigate();
   const { isAuth } = useContext(AuthContext);
+  const { CartCount } = useSelector((state) => state);
 
   function handleSearch(e) {
     setSearchParam(e.target.value);
@@ -287,7 +289,7 @@ export const Navbar = () => {
                       fill="inherit"
                     ></path>
                   </svg>
-                  <span className="cartCountNav">5</span>
+                  <span className="cartCountNav">{CartCount}</span>
                 </div>
 
                 <p style={{ marginTop: "12px" }}>Cart</p>
@@ -304,7 +306,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown1(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Brands
               </Link>
               {dropdown1 && (
@@ -335,7 +337,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown2(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Browse By
               </Link>
               {dropdown2 && (
@@ -376,7 +378,7 @@ export const Navbar = () => {
             </div>
 
             <div id="drop3">
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Bestsellers
               </Link>
             </div>
@@ -388,7 +390,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown4(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Skin Care
               </Link>
               {dropdown4 && (
@@ -435,7 +437,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown5(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Makeup
               </Link>
               {dropdown5 && (
@@ -482,7 +484,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown6(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Hair Care
               </Link>
               {dropdown6 && (
@@ -529,7 +531,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown7(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Bath & Body
               </Link>
 
@@ -577,7 +579,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown8(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Tools & Devices
               </Link>
               {dropdown8 && (
@@ -608,7 +610,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown9(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Gifts & Sets
               </Link>
 
@@ -650,13 +652,13 @@ export const Navbar = () => {
             </div>
 
             <div id="drop10">
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 BeautyFIX
               </Link>
             </div>
 
             <div id="drop11">
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Sale
               </Link>
             </div>
@@ -668,7 +670,7 @@ export const Navbar = () => {
               }}
               onMouseLeave={() => setDropdown12(false)}
             >
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 New
               </Link>
               {dropdown12 && (
@@ -709,7 +711,7 @@ export const Navbar = () => {
             </div>
 
             <div id="drop13">
-              <Link to="/prodcuts" className="link">
+              <Link to="/products" className="link">
                 Skin 101
               </Link>
             </div>

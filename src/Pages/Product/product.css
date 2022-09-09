@@ -1,0 +1,144 @@
+.sort {
+  /* border: 1px solid green; */
+  padding: 0 0 5% 8%;
+  width: 20%;
+  margin-top: 1%;
+}
+.sort div {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+/* .sort > div > h3{
+    padding-top: 0px;
+} */
+.sort button {
+  width: 8%;
+  height: 20px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid grey;
+}
+
+.SI {
+  cursor: pointer;
+  display: flex;
+  /* background-color: red; */
+  border: 1px solid white;
+}
+.SI:hover {
+  border: 1px solid red;
+}
+
+.SI p {
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+.Brands,
+.Preference,
+.Lips {
+  height: 200px;
+  /* border: 1px solid red; */
+  overflow-y: scroll;
+  margin-bottom: 10%;
+  margin-top: 2%;
+}
+
+/* ************************************************************** */
+.product {
+  padding: 0 4% 0 2%;
+  /* border: 1px solid red; */
+  width: 75%;
+}
+
+.HPP {
+  text-align: start;
+}
+
+.Sortby {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.Sortby p {
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.Sortby select {
+  margin-top: 1%;
+  width: 25%;
+  height: 40px;
+  border: 2px solid black;
+}
+
+.PRlist {
+  /* border: 1px solid blue; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(10,8%); */
+  grid-gap: 30px;
+}
+
+.ImG {
+  width: 99%;
+  min-height: 60%;
+  margin-bottom: 5%;
+  /* border: 1px sloid red; */
+  /* background-color: blue; */
+}
+
+.TRP {
+  width: 99%;
+  height: 20%;
+  /* border: 1px solid blue; */
+  margin-bottom: 10%;
+}
+.TRP > p {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.TRP h3 {
+  margin: 5% 0 10% 4%;
+}
+.QB {
+  width: 99%;
+  height: 20%;
+}
+
+.ATC {
+  width: 90%;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  position: sticky;
+  bottom: 0%;
+  transition: 0.2s;
+  border: none;
+}
+.ATC:hover {
+  background-color: rgb(81, 78, 78);
+}
+
+.wishlist {
+  position: absolute;
+  top: 4%;
+  right: 0%;
+  border-radius: 50%;
+  /* background-color: rgb(179, 174, 174);
+    border: 2px solid black;
+    padding: 10px 10px 3px 10px; */
+}
+
+.IW {
+  position: relative;
+  /* border: 1px solid yellow; */
+  min-height: 30%;
+}
+
+/* button
+    /* background-color: red; */
+
+@media only screen and (max-width: 912px) {
+}

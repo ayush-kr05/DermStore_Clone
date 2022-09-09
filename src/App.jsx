@@ -2,20 +2,25 @@ import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./Pages/Home/Home";
-import { Product } from "./Pages/Product/Product";
+// import { ProductPage } from "./Pages/Product/Product";
 import { ProductOverview } from "./Pages/Product_Overview/ProductOverview";
 import { Login } from "./Components/SignUp&Login/Login";
 import { SignUp } from "./Components/SignUp&Login/SignUp";
+import { ProductPage } from "./Pages/Product/Productpage";
+// import Cart from "./Pages/Cart/Cart";
+// import { PaymentPage } from "./Pages/Payment/PaymentPage";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/products" element={<Product />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/products/:id" element={<ProductOverview />}></Route>
+        {/* <Route path="/cart" element={<Cart />} />
+        <Route path="/payment" element={<PaymentPage />} /> */}
+        <Route path="/products/:id" element={<ProductOverview />} />
       </Routes>
     </div>
   );
