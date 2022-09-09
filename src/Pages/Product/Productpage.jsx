@@ -146,7 +146,7 @@ export const ProductPage = () => {
     axios
       .get(` http://localhost:8080/products?makeup_category=${makeup_category}`)
       .then(({ data }) => {
-        console.log(data);
+        // console.log(data);
         setItems(data);
       });
   };

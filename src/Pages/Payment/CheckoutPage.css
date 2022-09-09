@@ -1,0 +1,222 @@
+.first_di {
+  width: 100%;
+  height: 80px;
+}
+.first_di > img {
+  margin-left: 20%;
+  width: 15%;
+  height: 100%;
+}
+.main {
+  width: 40%;
+  height: 1800px;
+  margin-left: 20%;
+}
+.primary {
+  width: 100%;
+  display: flex;
+  background-color: #f2f2f2;
+}
+.second_main {
+  margin-top: 2%;
+  margin-left: 4%;
+  width: 20%;
+  height: 500px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.first_main {
+  margin-left: 8%;
+  width: 55%;
+  margin-top: 2%;
+
+  font-size: 16px;
+  background-color: white;
+}
+.first_main > h2 {
+  font-weight: bold;
+  margin-top: 4%;
+}
+.first_main > P {
+  margin-top: -2%;
+}
+.right_main {
+  display: flex;
+  background-color: white;
+  height: 8%;
+  margin-top: 4%;
+}
+.right_main > div > button {
+  width: 150%;
+  margin-top: 25%;
+  height: 40px;
+  margin-left: 30%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.main > hr {
+  margin-top: 5%;
+  border: 4px solid black;
+}
+
+.first_form {
+  width: 100%;
+  font-size: 18px;
+  background-color: white;
+}
+.first_form > p {
+  margin-left: 2%;
+}
+.first_form > h2 {
+  margin-left: 2%;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+.first_form > h3 {
+  margin-left: 2%;
+  /* font-weight: bold; */
+  margin-top: 3%;
+}
+.first_form > form {
+  margin-top: 6%;
+  margin-left: 4%;
+}
+.text {
+  margin-top: 2%;
+  width: 95%;
+  height: 30px;
+}
+.first_form > span {
+  margin-top: 5%;
+}
+.type {
+  margin-top: 2%;
+}
+.display {
+  display: none;
+}
+.to_active {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.to_active:hover + .display {
+  display: block;
+}
+.delivery {
+  margin-top: 6%;
+  width: 100%;
+  height: 9%;
+  border: 1px solid blue;
+  background-color: white;
+}
+.delivery > h2 {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 20px;
+}
+.box_del {
+  margin-top: 5%;
+  width: 90%;
+  height: 30%;
+  margin-left: 7%;
+  border: 1px solid #e6f0f8;
+  color: blue;
+  background-color: #e6f0f8;
+  text-align: center;
+  text-decoration: solid;
+}
+.payment {
+  width: 100%;
+  height: 45%;
+
+  margin-top: 6%;
+  background-color: white;
+}
+.payment_div {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 2px solid black;
+  height: 65%;
+}
+.under_payment {
+  margin-left: 2%;
+}
+.under_payment > h3 {
+  font-weight: bold;
+}
+.images_d {
+  display: flex;
+  margin-top: 2%;
+  gap: 2%;
+}
+.images_d > img {
+  width: 8%;
+}
+.images_d > :nth-child(1) {
+  margin-top: 2%;
+  height: 10%;
+}
+.half_text {
+  width: 40%;
+  height: 30px;
+  margin-top: 2%;
+}
+.last_box {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 2px solid black;
+  height: 20%;
+}
+.last_box > img {
+  margin-top: 5%;
+  width: 15%;
+  gap: 2%;
+}
+.last_but {
+  margin-left: 5%;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 4%;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.second_main > div {
+  margin-top: 4%;
+  margin-left: 2%;
+  font-size: 18px;
+  gap: 4%;
+}
+.second_main > div > h3 {
+  font-weight: bold;
+}
+.store_items_list {
+  width: 90%;
+  height: 80%;
+  border: 1px solid black;
+  margin-left: 5%;
+  margin-top: 7%;
+}
+.data_div {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 3%;
+}
+.data_div > :nth-child(2) {
+  margin-left: 15%;
+}
+.footera {
+  margin-top: 15%;
+}
+
+.headerLogo {
+  margin-top: 20px;
+  margin-left: 60px;
+}

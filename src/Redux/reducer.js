@@ -1,8 +1,9 @@
-import { COUNT_CART, GET_CARTDATA } from "./actionType";
+import { COUNT_CART, GET_CARTDATA, UPDATE_TOTAL } from "./actionType";
 
 const initState = {
   CartData: [],
   CartCount: 0,
+  TotalPay: 0,
 };
 
 export const reducer = (state = initState, action) => {

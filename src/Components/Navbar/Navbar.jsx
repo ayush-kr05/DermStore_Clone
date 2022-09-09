@@ -2,7 +2,8 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { ResNavBar } from "./ResNavBar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 
 import dropOneData from "./utils/dropdownOne.json";
 import dropTwoData from "./utils/dropdownTwo.json";
@@ -16,6 +17,7 @@ import dropTwelveData from "./utils/dropdownTwelve.json";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContextProvider";
+import { GetCartCount, fetchCartData } from "../../Redux/action";
 
 export const Navbar = () => {
   const [searchParam, setSearchParam] = React.useState("");
@@ -33,6 +35,7 @@ export const Navbar = () => {
   const [dropdown12, setDropdown12] = React.useState(false);
   const navigate = useNavigate();
   const { isAuth } = useContext(AuthContext);
+  const dispatch = useDispatch();
   const { CartCount } = useSelector((state) => state);
 
   function handleSearch(e) {
@@ -73,6 +76,20 @@ export const Navbar = () => {
   const handleRegister = () => {
     navigate("/signUp");
   };
+
+  // Updating NavbarCartData
+
+  const SetToReduce = () => {
+    axios.get(`http://localhost:8080/Cart`).then(({ data }) => {
+      dispatch(fetchCartData(data));
+      dispatch(GetCartCount(data.length));
+      // console.log(data.length);
+    });
+  };
+
+  React.useEffect(() => {
+    SetToReduce();
+  }, []);
 
   // console.log(searchData);
 

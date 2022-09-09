@@ -9,6 +9,9 @@ import { SignUp } from "./Components/SignUp&Login/SignUp";
 import { ProductPage } from "./Pages/Product/Productpage";
 // import Cart from "./Pages/Cart/Cart";
 // import { PaymentPage } from "./Pages/Payment/PaymentPage";
+import { CartAk } from "./Pages/Cart/CartAk";
+// import { Payment } from "./Pages/Payment/Payment";
+import { CheckoutPage } from "./Pages/Payment/CheckoutPage";
 
 function App() {
   return (
@@ -18,8 +21,8 @@ function App() {
         <Route path="/products" element={<ProductPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
-        {/* <Route path="/cart" element={<Cart />} />
-        <Route path="/payment" element={<PaymentPage />} /> */}
+        <Route path="/cart" element={<CartAk />} />
+        <Route path="/payment" element={<CheckoutPage />} />
         <Route path="/products/:id" element={<ProductOverview />} />
       </Routes>
     </div>

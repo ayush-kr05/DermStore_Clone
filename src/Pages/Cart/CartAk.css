@@ -1,0 +1,94 @@
+/* hr{
+background-color: rgb(133, 130, 130);
+} */
+
+.CartMainSection {
+  margin-top: 30px;
+  padding: 40px;
+  background-color: white;
+}
+.CardHeads {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.SadabaharButton {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+}
+.CartItemsTable {
+  width: 80%;
+}
+.CartItemsTable tr {
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  padding: 20px;
+}
+.CartItemsTable th {
+  padding: 16px 5px;
+}
+.th1,
+.td1 {
+  width: 35%;
+}
+.th2,
+.td2 {
+  width: 15%;
+}
+.th3,
+.td3 {
+  width: 30%;
+}
+.th4,
+.td4 {
+  width: 20%;
+}
+.td3Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.td4Div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.InceDecCartBtn {
+  border: none;
+  font-size: 28px;
+  background-color: white;
+}
+.InceDecCartBtn:hover {
+  background-color: rgb(176, 165, 165);
+}
+.removBtn {
+  border: none;
+  padding: 3px 8px;
+}
+.removBtn:hover {
+  background-color: white;
+  font-weight: bold;
+}
+.td3Div img {
+  width: 150px;
+}
+
+/* .td1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.td3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.td4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
