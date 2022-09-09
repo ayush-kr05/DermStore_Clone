@@ -7,19 +7,23 @@ export const ItemCountCounter = ({
   handleIncrement,
   handleDecrement,
 }) => {
+  const [quant, setQuant] = React.useState(1);
+  function handleIncrement() {
+    setQuant(quant + 1);
+  }
+  function handleDecrement() {
+    setQuant(quant - 1);
+  }
+
   return (
     <div>
       <p id="quantityPara">Quantity</p>
       <div className="itemCountAndBtnDiv">
         <div id="itemCountDiv">
-          <button
-            id="subBtn"
-            onClick={handleDecrement}
-            disabled={quantity <= 0}
-          >
+          <button id="subBtn" onClick={handleDecrement} disabled={quant <= 1}>
             -
           </button>
-          <div id="showQuantityDiv">{quantity}</div>
+          <div id="showQuantityDiv">{quant}</div>
           <button id="addBtn" onClick={handleIncrement}>
             +
           </button>
