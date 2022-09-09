@@ -1,0 +1,155 @@
+.CrouselText {
+  width: 100%;
+  text-align: right;
+}
+.h1carosal {
+  margin-bottom: 120px;
+  margin-left: 40px;
+}
+
+.SlidingProd {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 5px 10px;
+  margin: 14px 0;
+}
+
+.SlidingProdSmall {
+  display: flex;
+  gap: 10px;
+  margin: 20px 30px;
+  align-items: center;
+}
+.SlidingProdSmall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.ProdSmallDiv > img {
+  width: 100%;
+}
+.homeSection h3 {
+  margin-top: 40px;
+}
+.shop_category {
+  display: grid;
+  margin: 30px 40px;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.shop_category > a img {
+  width: 100%;
+  transition: 0.2s;
+}
+.shop_category > a img:hover {
+  transform: scale(1.1);
+}
+
+.shop_category2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.shop_category2 > div img {
+  width: 100%;
+}
+
+.SlidingProdSmall > .SlidingProd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 5px 10px;
+  margin: 14px 0;
+}
+.SingleImmg img {
+  width: 97%;
+}
+
+.NowTrendingDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 40px 20px;
+}
+.NowTrendingDiv img {
+  transition: 0.3s;
+}
+.NowTrendingDiv img:hover {
+  transform: scale(1.05);
+}
+.NowTrendingDiv h6 {
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.NowTrendingDiv h6:hover {
+  text-decoration: none;
+}
+.FeaturedBrandDiv {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin: 20px 35px;
+}
+.FeaturedBrandDiv > div {
+  display: flex;
+  align-items: center;
+}
+.FeaturedBrandDiv img {
+  width: 100%;
+}
+.VideoDiv {
+  margin: 50px 0;
+}
+.FromTheBlogDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px;
+}
+.FromTheBlogDiv img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 912px) {
+  .shop_category2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px;
+  }
+  .ProdSmallDiv img {
+    display: none;
+  }
+  .SlidingProdSmall {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .SlidingProdSmall > .SlidingProd {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 5px 10px;
+    margin: 14px 0;
+  }
+  .FeaturedBrandDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 15px;
+  }
+  .FeaturedBrandDiv > div {
+    margin-bottom: 15px;
+  }
+  .FromTheBlogDiv {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 40px;
+  }
+  .CaroselDivMain {
+    margin-top: 60px;
+  }
+  .NowTrendingDiv {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

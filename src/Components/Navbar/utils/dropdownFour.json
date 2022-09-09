@@ -1,0 +1,75 @@
+[
+	{
+		"id": 1,
+		"to": "",
+		"title": "Cleansers & Exfoliators",
+
+		"products": [
+			{ "id": 1, "title": "SkinCeuticals", "to": "" },
+			{ "id": 2, "title": "EltaMD", "to": "" },
+			{ "id": 3, "title": "SkinMedica", "to": "" },
+
+			{ "id": 4, "title": "Obagi", "to": "" },
+			{ "id": 5, "title": "iS Clinical", "to": "" },
+			{ "id": 6, "title": "Eminence Organic Skin Care", "to": "" }
+		]
+	},
+	{
+		"id": 2,
+		"to": "",
+		"title": "Treatments And Serums",
+
+		"products": [
+			{ "id": 1, "title": "Acne", "to": "" },
+			{ "id": 2, "title": "Acne Scars", "to": "" },
+			{ "id": 3, "title": "Aging Skin", "to": "" },
+
+			{ "id": 4, "title": "Blackheads", "to": "" },
+			{ "id": 5, "title": "Dark Circles", "to": "" },
+			{ "id": 6, "title": "Dark Spots", "to": "" }
+		]
+	},
+	{
+		"id": 3,
+		"to": "",
+		"title": "Moisturizers",
+
+		"products": [
+			{ "id": 1, "title": "Acene-Prone Skin", "to": "" },
+			{ "id": 2, "title": "Sensitive Skin", "to": "" },
+			{ "id": 3, "title": "Dry Skin", "to": "" },
+
+			{ "id": 4, "title": "Mature Skin", "to": "" },
+
+			{ "id": 5, "title": "Combination Skin", "to": "" },
+			{ "id": 6, "title": "Oily Skin", "to": "" },
+
+			{ "id": 7, "title": "Normal Skin", "to": "" }
+		]
+	},
+	{
+		"id": 4,
+		"to": "",
+		"title": "Eye Care",
+		"products": [
+			{ "id": 1, "title": "Vitamin C", "to": "" },
+			{ "id": 2, "title": "Hyaluronic Acid", "to": "" },
+			{ "id": 3, "title": "Retinol", "to": "" }
+		]
+	},
+	{
+		"id": 5,
+		"to": "",
+		"title": "Lip Care",
+		"products": [{ "id": 1, "title": "Sulwhasoo", "to": "" }]
+	},
+	{
+		"id": 6,
+		"to": "",
+		"title": "Face Sunscreen",
+		"products": [
+			{ "id": 1, "title": "Allure Award Winners", "to": "" },
+			{ "id": 2, "title": "Conscious Beauty", "to": "" }
+		]
+	}
+]
