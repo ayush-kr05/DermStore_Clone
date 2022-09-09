@@ -1,7 +1,14 @@
-import "./App.css";
+import React from 'react';
+import PaymentPage from './PaymentPage';
+import Cart from './Cart';
+
 
 function App() {
-  return <div className="App">Hello World</div>;
+  return (
+    <div>
+      <Cart />
+     </div>
+  );
 }
 
 export default App;
