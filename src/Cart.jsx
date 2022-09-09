@@ -7,7 +7,6 @@ import { Image } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { Fade } from '@chakra-ui/react'
 import { useDisclosure } from '@chakra-ui/react'
-import { useNumberInput } from '@chakra-ui/react'
 import { TriangleDownIcon } from '@chakra-ui/icons'
 import { CheckIcon } from '@chakra-ui/icons'
 import {
@@ -17,27 +16,22 @@ import {
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
 } from '@chakra-ui/react'
 
 function Cart() {
 
-  const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
-  useNumberInput({
-    step: 1,
-    defaultValue: 1,
-    min: 1,
-    max: 6
-  })
-
-const inc = getIncrementButtonProps()
-const dec = getDecrementButtonProps()
-const input = getInputProps()
+  const [count,setCount] = React.useState(1)
   const [data, setData] = React.useState([]);
 
+const handleAdd = () => {
+  setCount(count+1)
+}
+const handleSub = () => {
+  setCount(count-1)
+}
 
-  React.useEffect(() => {
+React.useEffect(() => {
     fetchAndUpdateData();
   }, []);
 
@@ -58,9 +52,9 @@ const input = getInputProps()
       </div>
       <br/>
       <div style={{marginLeft:'5%' }}>
-        <Box bg = '#f2f9ff' color = '#267b9b' border = '1px solid #cce5ff' fontFamily = '"lato regular",Helvetica,Arial,sans-serif' fontWeight='700' fontSize='14px' p ={2} w='90%'>New To Dermstore: Treat yourself to the Augustinus Bader Hand Treatment (worth $53) Add To Cart</Box>
+        <Box bg = '#f2f9ff' color = '#267b9b' border = '1px solid #cce5ff' fontFamily = '"lato regular",Helvetica,Arial,sans-serif' fontWeight='700' fontSize='14px' p ={2} w='90%'>New To Dermstore: Treat yourself to the Augustinus Bader Hand Treatment (worth $53)</Box>
         <br/>
-        <Box bg= '#e6f2e6' color='#007d1e' border = '1px solid #c8dec8' fontFamily = '"lato regular",Helvetica,Arial,sans-serif' fontWeight='700' fontSize='14px' p={2} w = '90%'>You have qualified for: Choose your gift with any purchase over $50 Don't forget to make your selection below</Box>
+        <Box bg= '#e6f2e6' color='#007d1e' border = '1px solid #c8dec8' fontFamily = '"lato regular",Helvetica,Arial,sans-serif' fontWeight='700' fontSize='14px' p={2} w = '90%'>You have qualified for: Choose your gift with any purchase over $50 - Don't forget to make your selection below</Box>
       </div>
       <br/><br/>
       <div style={{display:'flex'}}>
@@ -81,7 +75,7 @@ const input = getInputProps()
         <Td><img style={{height:'70px'}} src = {product.image} alt = 'ProductImage'/></Td>
         <Td style={{fontSize:'14px'}}>{product.title}</Td>
         <Td style={{fontSize:'14px',fontWeight:'700'}} isNumeric>{product.price}</Td>
-        <Td style={{fontSize:'14px'}} isNumeric><Button {...inc}>+</Button><Input w ='50px'{...input} /><Button {...dec}>-</Button></Td>
+        <Td style={{fontSize:'14px'}} isNumeric><Button onClick={handleAdd} >+</Button> {count} <Button onClick={handleSub}>-</Button></Td>
       </Tr>
        ))}
     </Tbody>
@@ -119,14 +113,13 @@ const input = getInputProps()
       </div>
     </div>
     <div style={{marginLeft:'5%'}}>
-     <hr />
-     <p>Receive an Augustinus Bader The Rich Cream 7ml when you spend over $150 on the brand. -</p>
-     <p>Rewards members earn 4300 points on this order Cart Subtotal:$860.00</p>
-     <hr/>
+     <hr style={{width:'330px'}}/>
+     <br/>
+     <p style={{fontWeight:'600', fontSize:'20px'}}>Cart Subtotal:</p>
      <br /> 
      <Input marginLeft='200px' fontSize='14px' borderRadius='none' size='lg' focusBorderColor='black' variant='outline' borderColor = 'black' placeholder = 'Got a coupon code? Enter it here:' w='300px'></Input> <Button bg='black' color='white' borderRadius='none' w='100px' p={2}>Add</Button>
      <br /><br/>
-     <hr/>
+     <hr style={{width:'1000px'}}/>
      <br/>
      <Button bg='white' color='black' border = '1px solid black' w='250px' p={2} borderRadius='none'>Continue Shopping</Button>
      <Button bg='black' color='white'  w='300px' p={2}  borderRadius='none' marginLeft='30%'>CHECKOUT SECURELY NOW</Button>
