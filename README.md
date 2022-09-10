@@ -41,7 +41,7 @@ This is Navbar section , Designed by Ayush Kumar. He added some functionality in
 
 ![App Screenshot](https://snipboard.io/ktXVPK.jpg)
 
-This is login and register page created by Md Talib , on clicking Register button Register page will appear , there you should have to enter your Information, And After Register you'll have to login.After clicking on Login to your page button will redirect to home Page .
+This is login and register page created by Md Talib , on clicking Register button Register page will appear , there you should have to enter your Details, And After Register you'll have to login. After clicking on Login to your page button will redirect to home Page .
 
 ## Home Page :-
 
