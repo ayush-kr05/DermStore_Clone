@@ -1,0 +1,446 @@
+.navbarSection {
+  width: 100%;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 5;
+}
+.navbar {
+  margin: 0 30px;
+  padding: 10px;
+  /* width: 100%; */
+  /* position: sticky;
+  top: 0;
+  right: 0; */
+  /* position: fixed;
+  background-color: green; */
+}
+.upper_navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.app_logo {
+  margin: 20px;
+  width: 15%;
+}
+.searchBar {
+  display: flex;
+  /* align-items: center; */
+  position: relative;
+  justify-content: center;
+  width: 55%;
+}
+.searchBar > button {
+  border: 1px solid black;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: white;
+}
+.searchBar > button:hover {
+  background-color: #f2f2f2;
+}
+.searchBar > input {
+  border: 1px solid black;
+  border-right: none;
+  width: 55%;
+  padding: 10px 20px;
+  font-size: 15px;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+.link {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+.link:hover {
+  background: transparent;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+}
+.account_opt {
+  width: 18%;
+}
+/* .OnlogoutDropdown,
+.OnloginDropdown {
+  border: 1px solid grey;
+  position: absolute;
+  padding-bottom: 20px;
+  background-color: white;
+  z-index: 1;
+}
+
+.OnlogoutDropdown :first-child {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+.OnlogoutDropdown a,
+.OnloginDropdown a {
+  text-decoration: none;
+  padding: 4px 0;
+  color: black;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.OnlogoutDropdown a:hover,
+.OnloginDropdown a:hover {
+  background-color: grey;
+}
+
+.OnlogoutDropdown :last-child,
+.OnloginDropdown :last-child {
+  display: flex;
+  flex-direction: column;
+} */
+
+.OnlogoutDropdown,
+.OnloginDropdown {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  width: 350px;
+}
+.logButtDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.loglot {
+  background-color: #222;
+  padding: 5px;
+  font-size: 18px;
+  color: white;
+}
+.loglot:hover {
+  background-color: rgb(85, 82, 82);
+}
+.logreg {
+  padding: 5px;
+  font-size: 18px;
+}
+.logreg:hover {
+  background-color: rgb(196, 191, 191);
+}
+
+.OnlogoutDropdown a,
+.OnloginDropdown a {
+  text-decoration: none;
+  padding: 4px 10px;
+  color: black;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.OnlogoutDropdown a:hover,
+.OnloginDropdown a:hover {
+  background-color: grey;
+  color: white;
+}
+
+.cart_option {
+  width: 12%;
+}
+
+.cart_svg_div {
+  position: relative;
+}
+
+.cartCountNav {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 3px 7px;
+  font-size: 10px;
+  position: absolute;
+  top: -15px;
+  left: 5px;
+}
+
+.lower_navbar {
+  display: flex;
+  margin-top: 10px;
+  width: 95%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  align-items: center;
+  position: relative;
+}
+
+.dropBox_lowNav {
+  display: flex;
+  align-items: center;
+}
+
+#drop_1 {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 3%;
+  height: fit-content;
+  width: min-content;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255);
+  letter-spacing: 0.1px;
+  float: left;
+  color: black;
+  top: 175px;
+  top: 33px;
+}
+
+#drop_2 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 2%;
+  height: fit-content;
+  top: 33px;
+  width: min-content;
+  width: 75%;
+  display: flex;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255);
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+
+#drop_4 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 2%;
+  height: fit-content;
+  top: 33px;
+  width: min-content;
+  width: 60%;
+  flex-wrap: wrap;
+  display: flex;
+  background-color: rgba(255, 255, 255);
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+
+#drop_5 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 2%;
+  height: fit-content;
+  top: 33px;
+  background-color: rgba(255, 255, 255);
+  width: min-content;
+  width: 54%;
+  flex-wrap: wrap;
+  display: flex;
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+
+#drop_6 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 2%;
+  height: fit-content;
+  top: 33px;
+  background-color: rgba(255, 255, 255);
+  width: min-content;
+  width: 51%;
+  flex-wrap: wrap;
+  display: flex;
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+
+#drop_7 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 2%;
+  height: fit-content;
+  background-color: rgba(255, 255, 255);
+  top: 33px;
+  width: min-content;
+  width: 45%;
+  flex-wrap: wrap;
+  display: flex;
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+#drop_8 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 2%;
+  height: fit-content;
+  top: 33px;
+  width: min-content;
+  background-color: rgba(255, 255, 255);
+  width: 34%;
+  flex-wrap: wrap;
+  display: flex;
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+#drop_9 {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 0.5%;
+  height: fit-content;
+  top: 33px;
+  width: min-content;
+  width: 14%;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+
+#drop_12 {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  padding: 0.5%;
+  height: fit-content;
+  top: 33px;
+  background-color: rgba(255, 255, 255);
+  width: min-content;
+  width: 14%;
+  flex-wrap: wrap;
+  display: flex;
+  letter-spacing: 0.1px;
+  float: left;
+  color: rgb(71, 71, 71);
+}
+
+.lower_navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.offers {
+  background-color: #f2f2f2;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.offers li {
+  list-style: none;
+}
+
+.offers-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  margin: auto;
+  width: 92%;
+}
+
+.bottom-heading {
+  background-color: rgba(153, 153, 153, 0.616);
+  height: 50px;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  height: 50px;
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  color: rgb(53, 50, 50);
+}
+
+.bottom-heading:hover {
+  background-color: rgba(153, 153, 153, 0.437);
+  color: black;
+}
+
+.searchResult_Div {
+  position: absolute;
+  width: 63%;
+  min-height: 280px;
+  top: 40px;
+  left: 137px;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(240, 248, 248);
+  padding: 0 5px;
+  overflow-y: hidden;
+  /* display: none; */
+}
+.searchResult_Div > div {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+.searchResult_Div img {
+  width: 50px;
+}
+.navRes_Section {
+  display: none;
+}
+
+@media only screen and (max-width: 912px) {
+  .navbarSection,
+  .offers,
+  .ContryDiv,
+  .bottom-heading {
+    display: none;
+  }
+
+  .navRes_Section {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    background-color: white;
+  }
+  .AppBarRes {
+    background-color: white;
+    justify-content: space-around;
+  }
+}
