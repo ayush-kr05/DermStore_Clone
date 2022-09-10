@@ -27,9 +27,9 @@ We are pursuing a Full Stack Web Development course at Masai school, In Unit 06,
 ## Git Hub Repo - 
 > ### •[DermStore](https://github.com/ayush-kr05/DermStore_Clone/)
 
-## Sample of Our Site :-
+## Sample of Our Site
 
-## Navbar Section : -
+## Navbar Section : 
 
 ![App Screenshot](https://snipboard.io/EuHt2r.jpg)
 
