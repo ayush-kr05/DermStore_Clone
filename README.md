@@ -10,13 +10,16 @@ We are pursuing a Full Stack Web Development course at Masai school, In Unit 06,
 
 ## Group Members
 
-- Yashasvi Vij :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yashasvi-vij-78454621b/)
 
-- Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
+- Vaibhav Suryavansi :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-suryawanshi-6b7110157/)
 
 - Ayush Kumar :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/ayush-kumar-akb/)
 
-- Vaibhav Suryavansi :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-suryawanshi-6b7110157/)
+
+- Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
+
+
+- Yashasvi Vij :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yashasvi-vij-78454621b/)
 
 - Krishna Chaturvedi  :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
 
