@@ -51,7 +51,7 @@ This is login and register page created by Md Talib , on clicking Register butto
 
 ![App Screenshot](https://snipboard.io/KrWGCn.jpg)
 
-This page was created by Ayush and Vaibhav. Truly he worked hard on this page because in this page had many additional functionality like images are slide automatic as well as on clicking arrow button . And this page had streaming section where videos are play .
+This page was created by Ayush and Vaibhav. Truly he worked hard on this page because in this page had many additional functionality like images are slide automatic as well as on clicking arrow button . And this page had streaming section where video is play .
 
 ## Category Page  :-
 ![App Screenshot](https://snipboard.io/ieSPfJ.jpg)
