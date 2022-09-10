@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import "./CheckoutPage.css";
+// import { AbsoluteCenter } from "@chakra-ui/react";
 export const CheckoutPage = () => {
   const { CartData } = useSelector((state) => state);
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ export const CheckoutPage = () => {
   //     setCartitem(data);
   //     //  console.log(data);
   //   }
+  // const [paymentSucsess, setPaymentSucsesss] = React.useState(false);
 
   const SetToReduce = () => {
     axios.get(`http://localhost:8080/Cart`).then(({ data }) => {
@@ -212,6 +214,7 @@ export const CheckoutPage = () => {
             SUBMIT MY ORDER
           </button>
         </div>
+
         <div className="second_main">
           <div>
             <h3>Order Summary</h3>

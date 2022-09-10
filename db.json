@@ -43,6 +43,39 @@
       "referralCode": "",
       "reward": true,
       "id": 4
+    },
+    {
+      "fullName": "Ayush Kumar",
+      "email": "ayushkumar.barbighaiya@gmail.com",
+      "confirmEmail": "ayushkumar.barbighaiya@gmail.com",
+      "password": "12345",
+      "confirmPassword": "123456",
+      "mobile": "7004012768",
+      "referralCode": "",
+      "reward": true,
+      "id": 5
+    },
+    {
+      "fullName": "Ayush Kumar",
+      "email": "ayushkumar.barbighaiya@gmail.com",
+      "confirmEmail": "ayushkumar.barbighaiya@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "mobile": "7004012768",
+      "referralCode": "122334",
+      "reward": true,
+      "id": 6
+    },
+    {
+      "fullName": "Ayush Kumar",
+      "email": "ayushkumar.barbighaiya@gmail.com",
+      "confirmEmail": "ayushkumar.barbighaiya@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "mobile": "7004012768",
+      "referralCode": "",
+      "reward": true,
+      "id": 7
     }
   ],
   "products": [
@@ -720,5 +753,27 @@
     }
   ],
   "Cart": [],
-  "wishlist": []
+  "wishlist": [
+    {
+      "id": "37808-419",
+      "brand_logo_url": "https://static.thcdn.com/design-assets/images/logos/shared-brands/colour/colorescience.gif",
+      "name": "Colorescience Sunforgettable® Total Protection™ Face Shield SPF 50 (PA+++) (1.8 fl. oz.)",
+      "description": "A hydrating skin-nourishing cleanser.",
+      "img_url_1": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-9924866362390772.jpg",
+      "img_url_2": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-3714864714301856.jpg",
+      "img_url_3": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-9924866362390772.jpg",
+      "item_category": "Face Makeup",
+      "complexion_format": "Liquid",
+      "complexion_coverage": "Medium",
+      "makeup_category": "Makeup",
+      "rating": 2.1,
+      "review_count": 97,
+      "mrp": 100,
+      "offer_price": 24,
+      "quantity": 1,
+      "item_in_cart": "false",
+      "item_like": "false",
+      "item_stock": "true"
+    }
+  ]
 }
