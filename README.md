@@ -318,7 +318,7 @@ This is the Checkout page, which is the last page of the website. The user will 
 > 
 ## 📒 Blog
 
-If you are interested in knowing more about this project...like how we made it and in what time then check [DermStore](https://medium.com/@iaishwaryapatil01/project-dermstore-ef822e549f3e) out! 
+If you are interested in knowing more about this project...like how we made it and in what time then check [DermStore](https://talib123.hashnode.dev/dermstorecom-website-clone-construct-week-unit-06) out! 
 
 ## Team Work Efforts 
 
