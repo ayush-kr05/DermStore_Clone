@@ -331,7 +331,7 @@ Complete given project works after we talk about presentation part of our projec
 
 We all showed our responsibility. It was a wonderful experience for all of us.
 
-** What We Learn **
+## What We Learn 
 - We all became proficient in reading the code of team members.
 - How to work and communicate with a team.
 - How to figure out new things.
@@ -339,7 +339,7 @@ We all showed our responsibility. It was a wonderful experience for all of us.
 - Here I get to know how the team works, how to keep myself and my teammates motivated throughout the ups and downs.
 - At last, I would like to thank my team members for their support & guidance during the project.
 
-** Major Issue We Encountered :**
+## Major Issue We Encountered :
 1. We faced difficulties to manage the routes, page, dependencies to work at a time.
 2. It was difficult for us to develop the carousel for our main page as it was not taught to us yet.
 3. We encounter issues while pushing all our code to the master branch in git.
