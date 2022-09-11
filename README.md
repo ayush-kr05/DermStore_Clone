@@ -1,9 +1,12 @@
 # DermStore_Clone
-**INTRODUCTION**:
+
+** INTRODUCTION **:
 
 Hello Everyone, We have build a clone of Dermstore. Currently, we are pursuing the Full Stack Web Development course at Masai School. We are in last week of unit 6 which is known by construct week . In this week we build the clone of Dermstore which is given by Masai School . Thanks to Masai School for this opportunity.
-![2Dermstore-world-brand-design.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1662881861440/aQJr8U33r.jpg align="left")
-**Our Team Members:**
+![App Screenshot](https://snipboard.io/2Dermstore-world-brand-design.jpg)
+
+## Our Team Members:
+
 We are Five in our group. Our group consists of the following students:
 1. Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
 2.  Vaibhav Suryavanshi :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-suryawanshi-6b7110157/)
@@ -12,16 +15,16 @@ We are Five in our group. Our group consists of the following students:
 5.  Krishna Chaturvedi  :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
 We are assigned to clone a website.
 
-**About Project:**
+** About Project: **
 
-***DermStore*** Link:- [DermStore](https://www.dermstore.com)
+*** DermStore *** Link:- [DermStore](https://www.dermstore.com)
 
 DermStore is a skin care and beauty e-commerce site in the United States.
 It is one of the best places to find some of the highest quality skincare, makeup, haircare, and so much more for both women and men.
 DermStore was founded by dermatologist Craig Kraffert in 1999. In 2012, the company expanded from distributing professional skin care, to consumer cosmetics brands.
 Since December 2020, it is a subsidiary of The Hut Group which is a British e-commerce company.
 
-**OUR WORK :**
+** OUR WORK : **
 
 We have tried to create as many features as we can of this website. Some of the pages and features which we created are :
 
@@ -35,7 +38,9 @@ users can also see new arrivals products and scroll through them just by clickin
 ![App Screenshot](https://snipboard.io/KlZygN.jpg)
 ![App Screenshot](https://snipboard.io/2k34SB.jpg)
 ![App Screenshot](https://snipboard.io/kXgCne.jpg)
+
 ## Register Page/Login:
+
 This is the signup page, which the user will get if he clicks on the continue button on the account page and new users can create an account here.
 ![App Screenshot](https://snipboard.io/SZthBq.jpg)
 ## Login Page:
@@ -44,17 +49,25 @@ This is the login page by clicking on the account option on the landing page use
 ## Footer part :-
 This is the footer part of the landing page where users can know about the company, privacy policy and payment partner, and many more. They can also sign up from the button present in the footer.
 ![App Screenshot](https://snipboard.io/KrWGCn.jpg)
+
 ## Category Page  :-
+
  This page will show those products which are on sale. And here users can also filter the products by prices of their own choice. And they can also add the products to the cart just by clicking on Add to Cart button.
  Users can filter products of their own choice also brand option is there to select the best product.
 ![App Screenshot](https://snipboard.io/ieSPfJ.jpg)
+
 ## Cart Page :
+
 This is the user's cart page, after clicking on the add to cart option users can see their product on the cart page. To get redirected to this page users need to click on the cart option in the navigation bar. Here users can check the product name, quantity, and total price.
 ![App Screenshot](https://snipboard.io/zavwmu.jpg)
+
 ## Payment Page :
+
 This is the Checkout page, which is the last page of the website. The user will get redirected to this page once he clicks on the checkout securely button on the cart page. The user needs to fill his account details and then after clicking on submit my order button.
 ![App Screenshot](https://snipboard.io/jt5UFD.jpg)
+
 # Create JSON Server
+
 ```
 {
   "usersInfo": [
@@ -303,7 +316,7 @@ This is the Checkout page, which is the last page of the website. The user will 
 > • GitHub
 > • Git
 
-**Team Work Efforts**
+** Team Work Efforts **
 
 It is always taught to us that communication plays a great where it comes to group work. Our communication was so good that it enhanced our interest and motivated us to keep working in order to achieve the end result.
 
@@ -319,7 +332,7 @@ Complete given project works after we talk about presentation part of our projec
 
 We all showed our responsibility. It was a wonderful experience for all of us.
 
-**What We Learn**
+** What We Learn **
 - We all became proficient in reading the code of team members.
 - How to work and communicate with a team.
 - How to figure out new things.
@@ -327,7 +340,7 @@ We all showed our responsibility. It was a wonderful experience for all of us.
 - Here I get to know how the team works, how to keep myself and my teammates motivated throughout the ups and downs.
 - At last, I would like to thank my team members for their support & guidance during the project.
 
-**Major Issue We Encountered :**
+** Major Issue We Encountered :**
 1. We faced difficulties to manage the routes, page, dependencies to work at a time.
 2. It was difficult for us to develop the carousel for our main page as it was not taught to us yet.
 3. We encounter issues while pushing all our code to the master branch in git.
