@@ -3,7 +3,7 @@
 ## INTRODUCTION :
 
 Hello Everyone, We have build a clone of Dermstore. Currently, we are pursuing the Full Stack Web Development course at Masai School. We are in last week of unit 6 which is known by construct week . In this week we build the clone of Dermstore which is given by Masai School . Thanks to Masai School for this opportunity.
-![App Screenshot](https://snipboard.io/2Dermstore-world-brand-design.jpg)
+![App Screenshot](https://snipboard.io/OulBQD.jpg)
 
 ## Our Team Members:
 
@@ -17,7 +17,7 @@ We are assigned to clone a website.
 
 ## About Project: 
 
-## DermStore  Link:- ![DermStore](https://www.dermstore.com)
+## DermStore Link:- [DermStore](https://www.dermstore.com)
 
 DermStore is a skin care and beauty e-commerce site in the United States.
 It is one of the best places to find some of the highest quality skincare, makeup, haircare, and so much more for both women and men.
@@ -27,8 +27,7 @@ Since December 2020, it is a subsidiary of The Hut Group which is a British e-co
 ## OUR WORK :
 
 We have tried to create as many features as we can of this website. Some of the pages and features which we created are :
-
-Landing page, log in, signup page, sell page, add to cart, checkout page, functionality to add any product to cart page and displaying its details and total amount, functionality to scroll horizontally on the home page through buttons in various sections, functionality to get the product description if you click its image on all pages except for homepage and functionality to sort the products in some of the pages.
+Home Page, log In page, signUp page, sell page, add to cart, checkout page, functionality to add any product to cart page and displaying its details and total amount, functionality to scroll horizontally on the home page through buttons in various sections, functionality to get the product description if you click its image on all pages except for homepage and functionality to sort the products in some of the pages.
 Here are some sample snippets of our cloned website.
 
 ## Home Page :
