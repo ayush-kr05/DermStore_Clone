@@ -1,6 +1,6 @@
 # DermStore_Clone
 
-** INTRODUCTION **:
+## INTRODUCTION :
 
 Hello Everyone, We have build a clone of Dermstore. Currently, we are pursuing the Full Stack Web Development course at Masai School. We are in last week of unit 6 which is known by construct week . In this week we build the clone of Dermstore which is given by Masai School . Thanks to Masai School for this opportunity.
 ![App Screenshot](https://snipboard.io/2Dermstore-world-brand-design.jpg)
@@ -15,16 +15,16 @@ We are Five in our group. Our group consists of the following students:
 5.  Krishna Chaturvedi  :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
 We are assigned to clone a website.
 
-** About Project: **
+## About Project: 
 
-*** DermStore *** Link:- [DermStore](https://www.dermstore.com)
+## DermStore  Link:- ![DermStore](https://www.dermstore.com)
 
 DermStore is a skin care and beauty e-commerce site in the United States.
 It is one of the best places to find some of the highest quality skincare, makeup, haircare, and so much more for both women and men.
 DermStore was founded by dermatologist Craig Kraffert in 1999. In 2012, the company expanded from distributing professional skin care, to consumer cosmetics brands.
 Since December 2020, it is a subsidiary of The Hut Group which is a British e-commerce company.
 
-** OUR WORK : **
+## OUR WORK :
 
 We have tried to create as many features as we can of this website. Some of the pages and features which we created are :
 
