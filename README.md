@@ -315,6 +315,9 @@ This is the Checkout page, which is the last page of the website. The user will 
 > • VS Code
 > • GitHub
 > • Git
+# 📒 Blog
+
+If you are interested in knowing more about this project...like how we made it and in what time then check [DermStore](https://medium.com/@iaishwaryapatil01/project-dermstore-ef822e549f3e) out! 
 
 ** Team Work Efforts **
 
