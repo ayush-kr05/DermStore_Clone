@@ -1,77 +1,59 @@
 # DermStore_Clone
-Dermstore is a skin care and beauty e-commerce site in the United States.
+**INTRODUCTION**:
+
+Hello Everyone, We have build a clone of Dermstore. Currently, we are pursuing the Full Stack Web Development course at Masai School. We are in last week of unit 6 which is known by construct week . In this week we build the clone of Dermstore which is given by Masai School . Thanks to Masai School for this opportunity.
+![2Dermstore-world-brand-design.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1662881861440/aQJr8U33r.jpg align="left")
+**Our Team Members:**
+We are Five in our group. Our group consists of the following students:
+1. Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
+2.  Vaibhav Suryavanshi :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-suryawanshi-6b7110157/)
+3.  Ayush Kumar :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/ayush-kumar-akb/)
+4.  Yashasvi Vij :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yashasvi-vij-78454621b/)
+5.  Krishna Chaturvedi  :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
+We are assigned to clone a website.
+
+**About Project:**
+
+***DermStore*** Link:- [DermStore](https://www.dermstore.com)
+
+DermStore is a skin care and beauty e-commerce site in the United States.
 It is one of the best places to find some of the highest quality skincare, makeup, haircare, and so much more for both women and men.
-Dermstore was founded by dermatologist Craig Kraffert in 1999. In 2012, the company expanded from distributing professional skin care, to consumer cosmetics brands.
+DermStore was founded by dermatologist Craig Kraffert in 1999. In 2012, the company expanded from distributing professional skin care, to consumer cosmetics brands.
 Since December 2020, it is a subsidiary of The Hut Group which is a British e-commerce company.
 
-## The Idea
-We are pursuing a Full Stack Web Development course at Masai school, In Unit 06, we have given a project to clone the DermStore Website. It was a pretty good project to work on. We are five members of the team. The task was to clone the pixel-perfect layout of the DermStore Website. Basically, it is a website from where you can purchase skin care products. Let's look at how we designed it 
-<br>
+**OUR WORK :**
 
-## Group Members
+We have tried to create as many features as we can of this website. Some of the pages and features which we created are :
 
+Landing page, log in, signup page, sell page, add to cart, checkout page, functionality to add any product to cart page and displaying its details and total amount, functionality to scroll horizontally on the home page through buttons in various sections, functionality to get the product description if you click its image on all pages except for homepage and functionality to sort the products in some of the pages.
+Here are some sample snippets of our cloned website.
 
-- Vaibhav Suryavansi :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-suryawanshi-6b7110157/)
+## Home Page :
 
-- Ayush Kumar :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/ayush-kumar-akb/)
-
-
-- Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
-
-
-- Yashasvi Vij :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yashasvi-vij-78454621b/)
-
-- Krishna Chaturvedi  :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
-
-
-## Project link
-> ### •[DermStore](https://dermstore-clones.netlify.app/)
-
-## Git Hub Repo - 
-> ### •[DermStore](https://github.com/ayush-kr05/DermStore_Clone/)
-
-## Sample of Our Site
-
-## Navbar Section : 
-
-![App Screenshot](https://snipboard.io/EuHt2r.jpg)
-
-This is Navbar section , Designed by Ayush Kumar. He added some functionality in this navbar section like search functionality.
-
-## Register Page/Login 
-
-![App Screenshot](https://snipboard.io/SZthBq.jpg)
-
-![App Screenshot](https://snipboard.io/ktXVPK.jpg)
-
-This is login and register page created by Md Talib , on clicking Register button Register page will appear , there you should have to enter your Details, And After Register you'll have to login. After clicking on Login to your page button will redirect to home Page .
-
-## Home Page :-
-
-![App Screenshot](https://snipboard.io/8fH1vF.jpg)
-
+On the Home Page, there are many options like a search bar where users can search products by product name or Brand, then there is also an account option where users can log in or signup and beside it, cart option is also there and by clicking on the cart option users can see the products which they have added to the cart.
+users can also see new arrivals products and scroll through them just by clicking the buttons which are present on the left and right side.
+![App Screenshot](https://snipboard.io/KlZygN.jpg)
+![App Screenshot](https://snipboard.io/2k34SB.jpg)
 ![App Screenshot](https://snipboard.io/kXgCne.jpg)
-
+## Register Page/Login:
+This is the signup page, which the user will get if he clicks on the continue button on the account page and new users can create an account here.
+![App Screenshot](https://snipboard.io/SZthBq.jpg)
+## Login Page:
+This is the login page by clicking on the account option on the landing page users will be redirected to the login page if the users are existing customers they can login by the same email and password. If users are new customers then by clicking on continue they will be redirected to the signup page.
+![App Screenshot](https://snipboard.io/ktXVPK.jpg)
+## Footer part :-
+This is the footer part of the landing page where users can know about the company, privacy policy and payment partner, and many more. They can also sign up from the button present in the footer.
 ![App Screenshot](https://snipboard.io/KrWGCn.jpg)
-
-This page was created by Ayush and Vaibhav. Truly he worked hard on this page because in this page had many additional functionality like images are slide automatic as well as on clicking arrow button . And this page had streaming section where video is play .
-
 ## Category Page  :-
+ This page will show those products which are on sale. And here users can also filter the products by prices of their own choice. And they can also add the products to the cart just by clicking on Add to Cart button.
+ Users can filter products of their own choice also brand option is there to select the best product.
 ![App Screenshot](https://snipboard.io/ieSPfJ.jpg)
-This page was created by Vaibhav Suryavanshi.This Category page had sub catagory like Moisturizers Face, Makeup Eye, Care Blush Face, Sun Care Lip, Makeup Jouer Cosmetics, Kevyn Aucoin, Kjaer Weis. You can sort by price High to low , low to High.
-
-## Cart Page :-
-
+## Cart Page :
+This is the user's cart page, after clicking on the add to cart option users can see their product on the cart page. To get redirected to this page users need to click on the cart option in the navigation bar. Here users can check the product name, quantity, and total price.
 ![App Screenshot](https://snipboard.io/zavwmu.jpg)
-
-This is cart page created by Yashasvi, In this page you can see all products that you added in you bag or cart . Here , you can see your total cart product with total price. From here you increase quantity or you can remove the products .
-
-## Payment Page :-
-
+## Payment Page :
+This is the Checkout page, which is the last page of the website. The user will get redirected to this page once he clicks on the checkout securely button on the cart page. The user needs to fill his account details and then after clicking on submit my order button.
 ![App Screenshot](https://snipboard.io/jt5UFD.jpg)
-
-This payment section was created by Yashvasvi. Here you can see various type of payment method .
-
 # Create JSON Server
 ```
 {
@@ -267,14 +249,14 @@ This payment section was created by Yashvasvi. Here you can see various type of 
       "img_url_1": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12459291-1584866382993395.jpg",
       "img_url_2": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12459291-2064956487273929.jpg",
       "img_url_3": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12459291-6614956509033181.jpg",
-      "item_category": "Blush",
-      "complexion_format": "Stick",
-      "complexion_coverage": "Medium",
-      "makeup_category": "Makeup",
+      "item category": "Blush",
+      "complexion format": "Stick",
+      "complexion coverage": "Medium",
+      "makeup category": "Makeup",
       "rating": 3.4,
-      "review_count": 35,
+      "review count": 35,
       "mrp": 83,
-      "offer_price": 25,
+      "offer price": 25,
       "quantity": 1,
       "item_in_cart": "false",
       "item_like": "false",
@@ -288,35 +270,64 @@ This payment section was created by Yashvasvi. Here you can see various type of 
       "img_url_1": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12905829-1844869965787699.jpg",
       "img_url_2": "https://static.thcdn.com/images/small/webp//productimg/130/130/12905829-1534869965846106.jpg",
       "img_url_3": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12905829-1794869965914122.jpg",
-      "item_category": "Lip Makeup",
-      "complexion_format": "Stick",
-      "complexion_coverage": "Sheer",
-      "makeup_category": "Lips",
+      "item category": "Lip Makeup",
+      "complexion format": "Stick",
+      "complexion coverage": "Sheer",
+      "makeup category": "Lips",
       "rating": 3.3,
-      "review_count": 143,
+      "review count": 143,
       "mrp": 96,
-      "offer_price": 43,
+      "offer price": 43,
       "quantity": 1,
       "item_in_cart": "false",
-      "item_like": "false",
-      "item_stock": "true"
+      "item like": "false",
+      "item stock": "true"
     }
 ]}
 ```
-
 ## Technology Used
-
 > • React,
 > • React-Redux,
 > • React-Router,
+> • Html5,
+> • React-Router,
 > • Module CSS,
 > • Material UI.
-> • db.json
+> • db. Json
 > • API
 > • Bootstrap
 > • JSON Server
 
 ## Tools
 > • VS Code
-> • Github
+> • GitHub
+> • Git
 
+**Team Work Efforts**
+
+It is always taught to us that communication plays a great where it comes to group work. Our communication was so good that it enhanced our interest and motivated us to keep working in order to achieve the end result.
+
+First we make a Slack and WhatsApp group for better with communication between all of team members , Then we connect a zoom meet discussion about given project.
+
+In zoom meet we divide small parts of project ,to all the team , next all are collecting raw data for project which content is better to merge and easy to complete work.
+
+Daily we connect a meet and discuss about past days work and that present days work, any one have issue all the team helps to solve the bug.
+
+Finally all push the data to Git hub , lot more changes will be occur.
+
+Complete given project works after we talk about presentation part of our project ,and we all are efforts goes to final result then we submit Successfully our project with our team efforts.
+
+We all showed our responsibility. It was a wonderful experience for all of us.
+
+**What We Learn**
+- We all became proficient in reading the code of team members.
+- How to work and communicate with a team.
+- How to figure out new things.
+- How to be more efficient and productive at the same time.
+- Here I get to know how the team works, how to keep myself and my teammates motivated throughout the ups and downs.
+- At last, I would like to thank my team members for their support & guidance during the project.
+
+**Major Issue We Encountered :**
+1. We faced difficulties to manage the routes, page, dependencies to work at a time.
+2. It was difficult for us to develop the carousel for our main page as it was not taught to us yet.
+3. We encounter issues while pushing all our code to the master branch in git.
