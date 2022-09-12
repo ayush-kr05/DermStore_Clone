@@ -8,9 +8,10 @@ Hello Everyone, We have build a clone of Dermstore. Currently, we are pursuing t
 ## Our Team Members:
 
 We are Five in our group. Our group consists of the following students:
-1. Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
+
+1.  Ayush Kumar :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/ayush-kumar-akb/)
 2.  Vaibhav Suryavanshi :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-suryawanshi-6b7110157/)
-3.  Ayush Kumar :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/ayush-kumar-akb/)
+3. Md Talib Ansari :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-talib-ansari-117483213/)
 4.  Yashasvi Vij :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yashasvi-vij-78454621b/)
 5.  Krishna Chaturvedi  :- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-chaturvedi-765026231/)
 
