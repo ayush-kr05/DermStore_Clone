@@ -27,7 +27,7 @@ export const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/usersInfo", formData);
+    await axios.post("https://ayush05.herokuapp.com/dermuserinfo", formData);
 
     setFormData(initialState);
     navigate("/login");

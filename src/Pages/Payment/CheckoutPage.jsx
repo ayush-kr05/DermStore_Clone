@@ -18,7 +18,7 @@ export const CheckoutPage = () => {
   // }, []);
   console.log(TotalPay);
   //   async function getData() {
-  //     const data = await fetch("http://localhost:8080/Cart").then((d) =>
+  //     const data = await fetch("https://ayush05.herokuapp.com/dermcart").then((d) =>
   //       d.json()
   //     );
   //     setCartitem(data);
@@ -27,7 +27,7 @@ export const CheckoutPage = () => {
   // const [paymentSucsess, setPaymentSucsesss] = React.useState(false);
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/Cart`).then(({ data }) => {
+    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
       dispatch(fetchCartData(data));
       dispatch(GetCartCount(data.length));
       // console.log(data.length);
@@ -36,7 +36,9 @@ export const CheckoutPage = () => {
 
   const handlePaymentSuccess = () => {
     CartData.map((ele) => {
-      axios.delete(`http://localhost:8080/Cart/${ele.id}`).then(SetToReduce());
+      axios
+        .delete(`https://ayush05.herokuapp.com/dermcart/${ele.id}`)
+        .then(SetToReduce());
     }).then(navigate("/"));
   };
 

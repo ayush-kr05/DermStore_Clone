@@ -29,7 +29,7 @@ export const CartAk = () => {
   // console.log(promo);
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/Cart`).then(({ data }) => {
+    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
       dispatch(fetchCartData(data));
       dispatch(GetCartCount(data.length));
       // console.log(data.length);
@@ -44,13 +44,15 @@ export const CartAk = () => {
   //Data Remove From Cart
 
   const removeFromCart = (id) => {
-    axios.delete(`http://localhost:8080/Cart/${id}`).then(SetToReduce());
+    axios
+      .delete(`https://ayush05.herokuapp.com/dermcart/${id}`)
+      .then(SetToReduce());
   };
 
   //Data Increase In Cart
 
   const handleIncrease = (id, prevCount) => {
-    fetch(`http://localhost:8080/Cart/${id}`, {
+    fetch(`https://ayush05.herokuapp.com/dermcart/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ quantity: prevCount }),
       headers: { "Content-Type": "application/json" },
