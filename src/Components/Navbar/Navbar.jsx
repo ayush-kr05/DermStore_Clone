@@ -60,7 +60,7 @@ export const Navbar = () => {
   }
 
   const getSearchData = (param) => {
-    fetch(`http://localhost:8080/products?q=${param}&_limit=5`)
+    fetch(`https://ayush05.herokuapp.com/dermproducts?q=${param}&_limit=5`)
       .then((res) => res.json())
       .then((res) => setSearchData(res))
       .catch((error) => console.log(error));
@@ -80,7 +80,7 @@ export const Navbar = () => {
   // Updating NavbarCartData
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/Cart`).then(({ data }) => {
+    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
       dispatch(fetchCartData(data));
       dispatch(GetCartCount(data.length));
       // console.log(data.length);

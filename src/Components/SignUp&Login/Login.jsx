@@ -35,7 +35,9 @@ export const Login = () => {
   console.log("userData", userData);
 
   const getUserData = async () => {
-    const { data } = await axios.get("http://localhost:8080/usersInfo");
+    const { data } = await axios.get(
+      "https://ayush05.herokuapp.com/dermuserinfo"
+    );
     setUserData(data);
   };
 
