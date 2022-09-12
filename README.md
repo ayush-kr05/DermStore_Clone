@@ -81,13 +81,10 @@ This is the Checkout page, which is the last page of the website. The user will 
 > • React,
 > • React-Redux,
 > • React-Router,
-> • Html5,
+> • Material UI,
 > • React-Router,
 > • Module CSS,
-> • Material UI.
-> • db. Json
 > • API
-> • Bootstrap
 > • JSON Server
 
 ## Tools
