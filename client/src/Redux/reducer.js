@@ -1,4 +1,4 @@
-import { COUNT_CART, GET_CARTDATA, UPDATE_TOTAL } from "./actionType";
+import { COUNT_CART, GET_CARTDATA } from "./actionType";
 
 const initState = {
   CartData: [],
