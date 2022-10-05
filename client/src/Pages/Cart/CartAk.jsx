@@ -73,7 +73,8 @@ export const CartAk = () => {
     fetch(`http://localhost:8080/cart/inc/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-    }).then(getCartData());
+    }).then(getCartData())
+    setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
   const handleDecrease = (id) => {
