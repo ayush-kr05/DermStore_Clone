@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect ,useState} from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { Footer } from "../../Components/Footer/Footer";
 import { useSelector } from "react-redux";
@@ -7,10 +7,16 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { fetchCartData, GetCartCount } from "../../Redux/action";
 import { useNavigate } from "react-router-dom";
+import { GET_CARTDATA } from "../../Redux/actionType";
+
+
 
 export const CartAk = () => {
-  const { CartData } = useSelector((state) => state);
-  console.log(CartData);
+  // const { CartData } = useSelector((state) => state);
+  const [CartData, setCartdata] = useState([]);
+  const [count, setCount] = useState([]);
+  
+  // console.log(CartData);
   const dispatch = useDispatch();
   const [promo, setPromo] = React.useState("");
   const navigate = useNavigate();
@@ -22,13 +28,34 @@ export const CartAk = () => {
 
   // const [CarTotalAmount, setCarTotalAmount] = React.useState(CarTotalAmounti);
 
+  useEffect(() => {
+    getCartData()
+  }, []);
+
+  function getCartData() {
+   
+    fetch("http://localhost:8080/cart")
+      .then((res) => res.json())
+      .then((res) => setCartdata(res))
+      .catch((err) => console.log(err))
+      
+    getCount();
+    
+  }
+
+  function getCount() {
+    fetch("http://localhost:8080/cart/count")
+      .then((res) => res.json())
+      .then((res) => setCount(res)); 
+  }
+
   function handlePromo(e) {
     setPromo(e.target.value);
   }
   // console.log(promo);
 
   const SetToReduce = () => {
-    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
+    axios.get(`http://localhost:8080/cart`).then(({ data }) => {
       dispatch(fetchCartData(data));
       dispatch(GetCartCount(data.length));
       // console.log(data.length);
@@ -41,22 +68,28 @@ export const CartAk = () => {
   };
 
   //Data Remove From Cart
-  
+
   const removeFromCart = (id) => {
-    axios
-      .delete(`https://ayush05.herokuapp.com/dermcart/${id}`)
-      .then(SetToReduce());
+    axios.delete(`http://localhost:8080/cart/${id}`).then(getCartData());
   };
 
   //Data Increase In Cart
 
-  const handleIncrease = (id, prevCount) => {
-    fetch(`https://ayush05.herokuapp.com/dermcart/${id}`, {
+  const handleIncrease = (id) => {
+    console.log("increa", id);
+    fetch(`http://localhost:8080/cart/inc/${id}`, {
       method: "PATCH",
-      body: JSON.stringify({ quantity: prevCount }),
       headers: { "Content-Type": "application/json" },
-    }).then(SetToReduce());
+    }).then(getCartData());
   };
+
+  const handleDecrease = (id) => {
+    fetch(`http://localhost:8080/cart/dec/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+    }).then(getCartData());
+  };
+  
 
   return (
     <>
@@ -77,57 +110,56 @@ export const CartAk = () => {
               </tr>
             </thead>
             <tbody>
-              {CartData.map((elm) => {
-                return (
-                  <tr className="CartRowMain" key={elm.id}>
-                    <td className="td1">
-                      <div className="td3Div">
-                        <img src={elm.img_url_1} />
-                        <p>{elm.name}</p>
-                      </div>
-                    </td>
+             {
+                CartData.map((elm) => {
+                  return (
+                    <tr className="CartRowMain" key={elm._id}>
+                      <td className="td1">
+                        <div className="td3Div">
+                          <img src={elm.img_url_1} />
+                          <p>{elm.name}</p>
+                        </div>
+                      </td>
 
-                    <td>
-                      <h5>$ {elm.mrp}</h5>
-                    </td>
+                      <td>
+                        <h5>$ {elm.mrp}</h5>
+                      </td>
 
-                    <td className="td3">
-                      <div className="td3Div">
-                        <button
-                          className="InceDecCartBtn"
-                          disabled={elm.quantity <= 1}
-                          onClick={() =>
-                            handleIncrease(elm.id, elm.quantity - 1)
-                          }
-                        >
-                          -
-                        </button>
-                        <h5>{elm.quantity}</h5>
-                        <button
-                          className="InceDecCartBtn"
-                          onClick={() =>
-                            handleIncrease(elm.id, elm.quantity + 1)
-                          }
-                        >
-                          +
-                        </button>
-                      </div>
-                    </td>
+                      <td className="td3">
+                        <div className="td3Div">
+                          <button
+                            className="InceDecCartBtn"
+                            disabled={elm.quantity <= 1}
+                            onClick={() => handleDecrease(elm._id)}
+                          >
+                            -
+                          </button>
+                          <h5>{elm.quantity}</h5>
+                          <button
+                            className="InceDecCartBtn"
+                            onClick={() => handleIncrease(elm._id)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </td>
 
-                    <td className="td4">
-                      <div className="td4Div">
-                        <h5>$ {elm.quantity * elm.mrp}</h5>
-                        <button
-                          className="removBtn"
-                          onClick={() => removeFromCart(elm.id)}
-                        >
-                          X
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
+                      <td className="td4">
+                        <div className="td4Div">
+                          <h5>$ {elm.quantity * elm.mrp}</h5>
+                          <button
+                            className="removBtn"
+                            onClick={() => removeFromCart(elm._id)}
+                          >
+                            X
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })
+                }
+           
             </tbody>
           </table>
         </div>

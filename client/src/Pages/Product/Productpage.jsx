@@ -153,6 +153,7 @@ export const ProductPage = () => {
   // SetToReduce();
 
   const sendToCart = (elem) => {
+    console.log(elem)
     fetch("http://localhost:8080/cart", {
       method: "POST",
       headers: {
@@ -531,13 +532,13 @@ export const ProductPage = () => {
                         const data = elem;
                         //send data to cart
                         sendToCart(elem);
-                        fetch("https://ayush05.herokuapp.com/dermcart", {
-                          method: "POST",
-                          headers: {
-                            "content-type": "application/json",
-                          },
-                          body: JSON.stringify(data),
-                        });
+                        // fetch("https://ayush05.herokuapp.com/dermcart", {
+                        //   method: "POST",
+                        //   headers: {
+                        //     "content-type": "application/json",
+                        //   },
+                        //   body: JSON.stringify(data),
+                        // });
                         SetToReduce();
                       }}
                       className="ATC"

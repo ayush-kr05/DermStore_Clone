@@ -32,8 +32,8 @@ cart.post('/', async (req, res) => {
 cart.patch('/inc/:id', async (req, res) => {
     try {
         const {id} = req.params;
-
-        const cartdata = await cartmodel.findOneAndUpdate({ id: id },  { $inc: { quantity: 1} },{new:true});
+console.log(id)
+        const cartdata = await cartmodel.findOneAndUpdate({ _id: id },  { $inc: { quantity: 1} },{new:true});
        await cartdata.save()
         res.status(200).send(cartdata)
     } catch (error) {
@@ -45,8 +45,8 @@ cart.patch('/inc/:id', async (req, res) => {
 cart.patch('/dec/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const cartdata = await cartmodel.findOneAndUpdate({ id: id }, { $inc: { quantity: -1 } }, { new: true });
-        await cartdata.save()
+        const cartdata = await cartmodel.findOneAndUpdate({ _id: id }, { $inc: { quantity: -1 } }, { new: true });
+        // await cartdata.save()
         res.status(200).send(cartdata)
     } catch (error) {
         res.status(404).send(error.message);
