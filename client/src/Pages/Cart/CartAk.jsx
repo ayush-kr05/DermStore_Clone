@@ -19,6 +19,7 @@ export const CartAk = () => {
   // console.log(CartData);
   const dispatch = useDispatch();
   const [promo, setPromo] = React.useState("");
+  const [point, setPoint] = React.useState("");
   const navigate = useNavigate();
   let CarTotalAmount = 0;
 
@@ -26,41 +27,38 @@ export const CartAk = () => {
     CarTotalAmount += CartData[i].quantity * CartData[i].mrp;
   }
 
-  // const [CarTotalAmount, setCarTotalAmount] = React.useState(CarTotalAmounti);
+  
 
   useEffect(() => {
     getCartData()
   }, []);
 
+  //getdata from api
   function getCartData() {
-   
     fetch("http://localhost:8080/cart")
       .then((res) => res.json())
       .then((res) => setCartdata(res))
       .catch((err) => console.log(err))
-      
-    getCount();
-    
   }
 
-  function getCount() {
-    fetch("http://localhost:8080/cart/count")
-      .then((res) => res.json())
-      .then((res) => setCount(res)); 
-  }
+  // function getCount() {
+  //   fetch("http://localhost:8080/cart/count")
+  //     .then((res) => res.json())
+  //     .then((res) => setCount(res)); 
+  // }
 
   function handlePromo(e) {
     setPromo(e.target.value);
   }
-  // console.log(promo);
+ 
 
-  const SetToReduce = () => {
-    axios.get(`http://localhost:8080/cart`).then(({ data }) => {
-      dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data.length));
-      // console.log(data.length);
-    });
-  };
+  // const SetToReduce = () => {
+  //   axios.get(`http://localhost:8080/cart`).then(({ data }) => {
+  //     dispatch(fetchCartData(data));
+  //     dispatch(GetCartCount(data.length));
+  //     // console.log(data.length);
+  //   });
+  // };
 
   const MoveToPayment = () => {
     localStorage.setItem("totalAmount", CarTotalAmount);
@@ -87,7 +85,8 @@ export const CartAk = () => {
     fetch(`http://localhost:8080/cart/dec/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-    }).then(getCartData());
+    }).then(getCartData())
+    setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
   
 
@@ -176,7 +175,7 @@ export const CartAk = () => {
             }}
           >
             <h5 style={{ fontWeight: "bold" }}>
-              Rewards members earn 9425 points on this order
+              Rewards members earn {point} points on this order
             </h5>
             <div style={{ display: "flex", gap: "10px", fontWeight: "bold" }}>
               <p>Cart Subtotal:</p>
