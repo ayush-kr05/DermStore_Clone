@@ -137,11 +137,30 @@ export const ProductPage = () => {
   };
 
   const SetToReduce = () => {
-    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
+    axios.get(`http://localhost:8080/cart`).then(({ data }) => {
       dispatch(fetchCartData(data));
       dispatch(GetCartCount(data.length));
       // console.log(data.length);
     });
+  };
+  // fetch("https://ayush05.herokuapp.com/dermcart", {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json",
+  //   },
+  //   body: JSON.stringify(data),
+  // });
+  // SetToReduce();
+
+  const sendToCart = (elem) => {
+    fetch("http://localhost:8080/cart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(elem),
+    });
+    SetToReduce();
   };
 
   const handleMakeupCategory = (makeup_category) => {
@@ -510,6 +529,8 @@ export const ProductPage = () => {
                         alert("Added to Cart");
                         getData();
                         const data = elem;
+                        //send data to cart
+                        sendToCart(elem);
                         fetch("https://ayush05.herokuapp.com/dermcart", {
                           method: "POST",
                           headers: {

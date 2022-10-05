@@ -14,6 +14,7 @@ try {
 }
 })
 
+//post item to cart
 cart.post('/', async (req, res) => {
     try {
         const getdata = req.body;
@@ -26,6 +27,8 @@ cart.post('/', async (req, res) => {
     }
 })
 
+
+//for increase the count of item
 cart.patch('/inc/:id', async (req, res) => {
     try {
         const {id} = req.params;
@@ -37,10 +40,11 @@ cart.patch('/inc/:id', async (req, res) => {
         res.status(404).send(error.message);
     }
 })
+
+//for Descrease the count of item
 cart.patch('/dec/:id', async (req, res) => {
     try {
         const { id } = req.params;
-
         const cartdata = await cartmodel.findOneAndUpdate({ id: id }, { $inc: { quantity: -1 } }, { new: true });
         await cartdata.save()
         res.status(200).send(cartdata)
@@ -50,7 +54,7 @@ cart.patch('/dec/:id', async (req, res) => {
 })
 
 
-
+//delete item
 cart.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;

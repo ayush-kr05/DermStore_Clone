@@ -14,7 +14,6 @@ export const CartAk = () => {
   const dispatch = useDispatch();
   const [promo, setPromo] = React.useState("");
   const navigate = useNavigate();
-
   let CarTotalAmount = 0;
 
   for (let i = 0; i < CartData.length; i++) {
@@ -42,7 +41,7 @@ export const CartAk = () => {
   };
 
   //Data Remove From Cart
-
+  
   const removeFromCart = (id) => {
     axios
       .delete(`https://ayush05.herokuapp.com/dermcart/${id}`)
