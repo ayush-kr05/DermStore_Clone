@@ -1,45 +1,50 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
 .first_di {
   width: 100%;
   height: 80px;
 }
 .first_di > img {
-  margin-left: 20%;
+  margin-left: 10%;
   width: 15%;
   height: 100%;
 }
 .main {
-  width: 40%;
-  height: 1800px;
-  margin-left: 20%;
+  width: 50%;
+  height: auto;
+  margin-left: 5%;
 }
 .primary {
   width: 100%;
   display: flex;
   background-color: #f2f2f2;
-}
-.second_main {
-  margin-top: 2%;
-  margin-left: 4%;
-  width: 20%;
-  height: 500px;
-  border: 1px solid black;
-  background-color: white;
+  height: auto;
+  padding-bottom: 14%;
 }
 
+
 .first_main {
-  margin-left: 8%;
+  margin-left: 0%; /*it was 6*/
   width: 55%;
   margin-top: 2%;
 
   font-size: 16px;
   background-color: white;
+  align-items: left;
+  padding-left: 10px;
 }
 .first_main > h2 {
   font-weight: bold;
   margin-top: 4%;
+  text-align: left;
+  /* margin-left: -60%; */
 }
 .first_main > P {
   margin-top: -2%;
+  text-align: left;
 }
 .right_main {
   display: flex;
@@ -47,24 +52,28 @@
   height: 8%;
   margin-top: 4%;
 }
+
 .right_main > div > button {
-  width: 150%;
-  margin-top: 25%;
+  width: 100%;
+  margin-top: 40%;
   height: 40px;
-  margin-left: 30%;
+  
+  margin-left: 70%;
   background-color: black;
   color: white;
   cursor: pointer;
 }
-.main > hr {
+.hero {
   margin-top: 5%;
-  border: 4px solid black;
+  border: 4px solid rgb(0, 0, 0);
 }
 
 .first_form {
   width: 100%;
   font-size: 18px;
   background-color: white;
+  text-align: left;
+  padding-bottom: 20px;
 }
 .first_form > p {
   margin-left: 2%;
@@ -75,43 +84,57 @@
   font-size: 20px;
   margin-bottom: 2%;
 }
+.em{
+  padding-left: 10px;
+}
 .first_form > h3 {
   margin-left: 2%;
   /* font-weight: bold; */
   margin-top: 3%;
+  
 }
+
 .first_form > form {
   margin-top: 6%;
   margin-left: 4%;
 }
 .text {
-  margin-top: 2%;
+  margin-top: -2%;
   width: 95%;
   height: 30px;
+  
 }
 .first_form > span {
   margin-top: 5%;
 }
 .type {
-  margin-top: 2%;
+  margin-top: 1%;
+  text-align: left;
 }
-.display {
-  display: none;
-}
+
 .to_active {
   font-size: 12px;
+  margin-top: 10px;
   text-decoration: underline;
   cursor: pointer;
 }
 .to_active:hover + .display {
   display: block;
 }
+/* .display{
+  margin-top: 1%;
+  text-align: left;
+} */
 .delivery {
   margin-top: 6%;
   width: 100%;
   height: 9%;
   border: 1px solid blue;
   background-color: white;
+}
+.lefty{
+  text-align: left;
+  padding-left: 20px;
 }
 .delivery > h2 {
   margin-top: 2%;
@@ -122,19 +145,22 @@
   margin-top: 5%;
   width: 90%;
   height: 30%;
-  margin-left: 7%;
+  margin-left: 3%;
   border: 1px solid #e6f0f8;
   color: blue;
   background-color: #e6f0f8;
   text-align: center;
   text-decoration: solid;
+  
 }
+
 .payment {
   width: 100%;
-  height: 45%;
-
+  height: auto;
   margin-top: 6%;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding-bottom: 30px;
 }
 .payment_div {
   width: 90%;
@@ -142,13 +168,18 @@
   margin-left: 5%;
   border: 2px solid black;
   height: 65%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .under_payment {
   margin-left: 2%;
+  padding-bottom: 15px;
 }
-.under_payment > h3 {
+.under_payment > h5 {
   font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
 }
+
 .images_d {
   display: flex;
   margin-top: 2%;
@@ -161,11 +192,37 @@
   margin-top: 2%;
   height: 10%;
 }
+.under_payment >.type{
+  text-align: left;
+  margin-left: 15px;
+}
+
 .half_text {
   width: 40%;
   height: 30px;
   margin-top: 2%;
 }
+.exp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.half_cvv{
+  width: 40%;
+  height: 30px;
+  margin-top: 2%;
+  margin-left:-53%;
+  justify-self: flex-start;
+}
+.check{
+  text-align: left;
+  padding-left: 20px;
+  margin: block;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
 .last_box {
   width: 90%;
   margin-top: 5%;
@@ -179,7 +236,7 @@
   gap: 2%;
 }
 .last_but {
-  margin-left: 5%;
+  margin-top: 50px;
   width: 90%;
   height: 40px;
   margin-bottom: 4%;
@@ -188,12 +245,45 @@
   font-size: 20px;
   cursor: pointer;
 }
+.last_but:hover{
+  background-color: rgba(20, 19, 19, 0.779);
+  color: white;
+  outline: none;
+  border: none;
+}
+.payDiv{
+  width: 100%;
+  height: auto;
+  margin-top: 3%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+
+
+.second_main {
+  margin-top: 2%;
+  margin-left: 4%;
+  
+  border: 1px solid black;
+  background-color: white;
+  position: fixed;
+  right:70px;
+  top:85px;
+  height:auto;
+  width: 300px;
+}
+
+
+
 .second_main > div {
   margin-top: 4%;
   margin-left: 2%;
-  font-size: 18px;
+  font-size: 16px;
   gap: 4%;
 }
+
 .second_main > div > h3 {
   font-weight: bold;
 }
@@ -212,9 +302,9 @@
 .data_div > :nth-child(2) {
   margin-left: 15%;
 }
-.footera {
+/* .footera {
   margin-top: 15%;
-}
+} */
 
 .headerLogo {
   margin-top: 20px;
