@@ -6,7 +6,7 @@ background-color: rgb(133, 130, 130);
   margin: auto;
   margin-left: 30px;
   margin-top: 10px;
-  
+
   padding: 40px;
   background-color: white;
 }
@@ -78,7 +78,6 @@ background-color: rgb(133, 130, 130);
 .td3Div img {
   width: 150px;
 }
-
 
 /* .td1 {
   display: flex;

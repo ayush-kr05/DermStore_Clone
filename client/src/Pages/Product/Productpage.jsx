@@ -153,7 +153,7 @@ export const ProductPage = () => {
   // SetToReduce();
 
   const sendToCart = (elem) => {
-    console.log(elem)
+    console.log(elem);
     fetch("http://localhost:8080/cart", {
       method: "POST",
       headers: {

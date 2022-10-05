@@ -1,4 +1,4 @@
-import React, { useEffect ,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { Footer } from "../../Components/Footer/Footer";
 import { useSelector } from "react-redux";
@@ -9,13 +9,11 @@ import { fetchCartData, GetCartCount } from "../../Redux/action";
 import { useNavigate } from "react-router-dom";
 import { GET_CARTDATA } from "../../Redux/actionType";
 
-
-
 export const CartAk = () => {
   // const { CartData } = useSelector((state) => state);
   const [CartData, setCartdata] = useState([]);
   const [count, setCount] = useState([]);
-  
+
   // console.log(CartData);
   const dispatch = useDispatch();
   const [promo, setPromo] = React.useState("");
@@ -27,10 +25,8 @@ export const CartAk = () => {
     CarTotalAmount += CartData[i].quantity * CartData[i].mrp;
   }
 
-  
-
   useEffect(() => {
-    getCartData()
+    getCartData();
   }, []);
 
   //getdata from api
@@ -38,19 +34,18 @@ export const CartAk = () => {
     fetch("http://localhost:8080/cart")
       .then((res) => res.json())
       .then((res) => setCartdata(res))
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err));
   }
 
   // function getCount() {
   //   fetch("http://localhost:8080/cart/count")
   //     .then((res) => res.json())
-  //     .then((res) => setCount(res)); 
+  //     .then((res) => setCount(res));
   // }
 
   function handlePromo(e) {
     setPromo(e.target.value);
   }
- 
 
   // const SetToReduce = () => {
   //   axios.get(`http://localhost:8080/cart`).then(({ data }) => {
@@ -85,10 +80,9 @@ export const CartAk = () => {
     fetch(`http://localhost:8080/cart/dec/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-    }).then(getCartData())
+    }).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
-  
 
   return (
     <>
@@ -109,56 +103,53 @@ export const CartAk = () => {
               </tr>
             </thead>
             <tbody>
-             {
-                CartData.map((elm) => {
-                  return (
-                    <tr className="CartRowMain" key={elm._id}>
-                      <td className="td1">
-                        <div className="td3Div">
-                          <img src={elm.img_url_1} />
-                          <p>{elm.name}</p>
-                        </div>
-                      </td>
+              {CartData.map((elm) => {
+                return (
+                  <tr className="CartRowMain" key={elm._id}>
+                    <td className="td1">
+                      <div className="td3Div">
+                        <img src={elm.img_url_1} />
+                        <p>{elm.name}</p>
+                      </div>
+                    </td>
 
-                      <td>
-                        <h5>$ {elm.mrp}</h5>
-                      </td>
+                    <td>
+                      <h5>$ {elm.mrp}</h5>
+                    </td>
 
-                      <td className="td3">
-                        <div className="td3Div">
-                          <button
-                            className="InceDecCartBtn"
-                            disabled={elm.quantity <= 1}
-                            onClick={() => handleDecrease(elm._id)}
-                          >
-                            -
-                          </button>
-                          <h5>{elm.quantity}</h5>
-                          <button
-                            className="InceDecCartBtn"
-                            onClick={() => handleIncrease(elm._id)}
-                          >
-                            +
-                          </button>
-                        </div>
-                      </td>
+                    <td className="td3">
+                      <div className="td3Div">
+                        <button
+                          className="InceDecCartBtn"
+                          disabled={elm.quantity <= 1}
+                          onClick={() => handleDecrease(elm._id)}
+                        >
+                          -
+                        </button>
+                        <h5>{elm.quantity}</h5>
+                        <button
+                          className="InceDecCartBtn"
+                          onClick={() => handleIncrease(elm._id)}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </td>
 
-                      <td className="td4">
-                        <div className="td4Div">
-                          <h5>$ {elm.quantity * elm.mrp}</h5>
-                          <button
-                            className="removBtn"
-                            onClick={() => removeFromCart(elm._id)}
-                          >
-                            X
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })
-                }
-           
+                    <td className="td4">
+                      <div className="td4Div">
+                        <h5>$ {elm.quantity * elm.mrp}</h5>
+                        <button
+                          className="removBtn"
+                          onClick={() => removeFromCart(elm._id)}
+                        >
+                          X
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
