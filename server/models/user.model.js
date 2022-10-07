@@ -7,8 +7,9 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     confirmEmail: { type: String, required: true },
     mobile: { type: Number, required: true },
-    referralCode: { type: String, required: true },
-    reward: { type: String, required: true },
+    referralCode: { type: String },
+    reward: { type: String },
+    cartItems: [mongoose.Schema.Types.ObjectId],
   },
   {
     versionKey: false,
