@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
     mobile: { type: Number, required: true },
     referralCode: { type: String },
     reward: { type: String },
-    cartItems: [mongoose.Schema.Types.ObjectId],
+    cartItems: [Object],
   },
   {
     versionKey: false,
