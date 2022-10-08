@@ -1,5 +1,7 @@
+const { query } = require('express');
 const express = require('express')
 const cartmodel = require('../models/cart.model')
+const usermodel = require('../models/user.model');
 const cart = express.Router();
 
 
@@ -27,31 +29,70 @@ cart.post('/', async (req, res) => {
 
 
 //for increase the count of item
+// cart.patch('/inc/:id', async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         console.log(id)
+//         const cartdata = await cartmodel.findOneAndUpdate({ _id: id }, { $inc: { quantity: 1 } }, { new: true });
+//         await cartdata.save()
+//         res.status(200).send(cartdata)
+//     }
+//     catch (error) {
+//         res.status(404).send(error.message);
+//     }
+// })
+//for increase the count of item
 cart.patch('/inc/:id', async (req, res) => {
     try {
         const { id } = req.params;
+        const { itemid } = req.query;
         console.log(id)
-        const cartdata = await cartmodel.findOneAndUpdate({ _id: id }, { $inc: { quantity: 1 } }, { new: true });
-        await cartdata.save()
-        res.status(200).send(cartdata)
+        console.log(itemid)
+        let newdata = await usermodel.updateMany({ _id: id, "cartItems.id": itemid },{ $inc: { "cartItems.$.quantity": -1 } })
+        res.send(newdata).status(200)
+        // db.users.updateOne({ _id: ObjectId('6340466ede6af2d810b2367e'), "cartItems.id": "10956-020" }, { $set: { "cartItems.$.quantity": 2 } })
+        // db.carts.updateOne({ _id: ObjectId('634012651b299255346e8a54'), "demo.name": "vishal" }, { $set: { "demo.$.name": "vishalkarale" } })
+        // db.users.updateOne({ _id: ObjectId('6340466ede6af2d810b2367e'), "cartItems.review_count": 118 }, { $set: { "review_count.$.quantity": 2 } })
     }
     catch (error) {
-        res.status(404).send(error.message);
+        res.send(error)
     }
 })
 
 //for Descrease the count of item
+// cart.patch('/dec/:id', async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         const cartdata = await cartmodel.findOneAndUpdate({ _id: id }, { $inc: { quantity: -1 } }, { new: true });
+//         // await cartdata.save()
+//         res.status(200).send(cartdata)
+//     }
+//     catch (error) {
+//         res.status(404).send(error.message);
+//     }
+// })
+
+// for decrease the count of item
 cart.patch('/dec/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const cartdata = await cartmodel.findOneAndUpdate({ _id: id }, { $inc: { quantity: -1 } }, { new: true });
-        // await cartdata.save()
-        res.status(200).send(cartdata)
-    }
-    catch (error) {
-        res.status(404).send(error.message);
+        const { itemid } = req.query;
+        console.log(id)
+        console.log(itemid)
+        let newdata = await usermodel.updateMany({ _id: id, "cartItems.id": itemid }, { $inc: { "cartItems.$.quantity": 1 } })
+        res.send(newdata).status(200)
+        // db.users.updateOne({ _id: ObjectId('6340466ede6af2d810b2367e'), "cartItems.id": "10956-020" }, { $set: { "cartItems.$.quantity": 2 } })
+        // db.carts.updateOne({ _id: ObjectId('634012651b299255346e8a54'), "demo.name": "vishal" }, { $set: { "demo.$.name": "vishalkarale" } })
+        // db.users.updateOne({ _id: ObjectId('6340466ede6af2d810b2367e'), "cartItems.review_count": 118 }, { $set: { "review_count.$.quantity": 2 } })
+}
+     catch (error) {
+        res.send(error)
     }
 })
+// db.students.updateOne(
+//     { _id: 4, "grades.grade": 85 },
+//     { $set: { "grades.$.std": 6 } }
+// )
 
 
 //delete item
