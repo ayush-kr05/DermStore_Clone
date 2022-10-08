@@ -89,7 +89,7 @@ export const ProductPage = () => {
 
   async function getData() {
     const data = await fetch(
-      " https://ayush05.herokuapp.com/dermproducts"
+      "http://localhost:8080/products"
     ).then((d) => d.json());
     setItems(data);
     //  console.log(data);
@@ -111,6 +111,7 @@ export const ProductPage = () => {
       console.log(d);
       setItems(d);
     }
+  funct
 
     if (e.target.value == "ATZ") {
       const d = [...items].sort((a, b) => {
