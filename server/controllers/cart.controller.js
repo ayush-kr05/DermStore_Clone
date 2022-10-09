@@ -1,4 +1,4 @@
-const { query } = require('express');
+
 const express = require('express')
 const cartmodel = require('../models/cart.model')
 const usermodel = require('../models/user.model');
@@ -58,6 +58,8 @@ cart.patch('/inc/:id', async (req, res) => {
         res.send(error)
     }
 })
+// db.users.updateOne({ _id: ObjectId('6340469bde6af2d810b23681'), "cartItems.id": "10956-020" }, { $pull: { cartItems: { _id: ObjectId('6340c4f183fcc7a4628137d4') } } })
+// { $pull: { results: { score: 8, item: "B" } } }
 
 //for Descrease the count of item
 // cart.patch('/dec/:id', async (req, res) => {
@@ -99,8 +101,11 @@ cart.patch('/dec/:id', async (req, res) => {
 cart.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const cartdata = await cartmodel.findOneAndDelete({ _id: id });
-        await cartdata.save();
+        const { itemid, cartitemid } = req.query;
+        console.log(itemid, cartitemid, id)
+        const cartdata = await cartmodel.updateOne({ _id: id, "cartItems.id": itemid }, { $pull: { cartItems: { _id: cartitemid   } } })
+console.log(cartdata);
+        // await cartdata.save();
         res.status(200).send(cartdata)
     }
     catch (error) {
