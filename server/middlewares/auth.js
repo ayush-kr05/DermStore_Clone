@@ -9,7 +9,7 @@ authRouter.post("/signUp", async (req, res) => {
   try {
     const userExist = await User.exists({ email: email });
     if (userExist) {
-      return res.status(403).send({ message: "User already exists" });
+      return res.status(201).send({ message: "User already exists" });
     }
     const user = User(req.body);
     user.save();
@@ -25,10 +25,10 @@ authRouter.post("/login", async (req, res) => {
     const user = await User.findOne({ email });
     // console.log(user);
     if (!user) {
-      return res.status(404).send({ message: "User not found" });
+      return res.status(200).send({ message: "User not found" });
     } else if (user.password !== password) {
       // console.log(user.password, password);
-      return res.status(401).send({ message: "Wrong Password" });
+      return res.status(200).send({ message: "Wrong Password" });
     } else {
       return res.send({ message: "Login Success", token: user._id });
     }

@@ -11,11 +11,11 @@ export const Login = () => {
   const [userData, setUserData] = useState([]);
   const [loginData, setLoginData] = useState(initialState);
 
-  let userToken = JSON.parse(localStorage.getItem("userToken"));
+  // let userToken = JSON.parse(localStorage.getItem("userToken"));
   const { isAuth, handleAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
-  console.log("userToken", userToken);
+  // console.log("userToken", userToken);
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -32,7 +32,7 @@ export const Login = () => {
     }
   }, [isAuth]);
 
-  console.log("userData", userData);
+  // console.log("userData", userData);
 
   const getUserData = async () => {
     const { data } = await axios.get(
@@ -41,22 +41,23 @@ export const Login = () => {
     setUserData(data);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    let flag = false;
-    userData.forEach((e) => {
-      console.log("e", e);
-      if (e.email === loginData.email && e.password === loginData.password) {
-        localStorage.setItem("userToken", JSON.stringify(loginData));
+  // const handleSubmit = (event)
 
-        console.log("inside condition");
-        flag = true;
-        handleAuth(loginData);
-        window.location.reload();
-      }
-    });
-    if (!flag) {
-      return alert("Invalid username or password");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // let flag = false;
+    const { data } = await axios.post(
+      "http://localhost:8080/auth/login",
+      loginData
+    );
+    if (data.token) {
+      localStorage.setItem("Token", JSON.stringify(data.token));
+      localStorage.setItem("userToken", JSON.stringify(loginData));
+      handleAuth(loginData);
+      window.location.reload();
+    } else {
+      alert(data.message);
+      return;
     }
   };
 

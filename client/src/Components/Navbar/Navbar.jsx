@@ -239,6 +239,7 @@ export const Navbar = () => {
                         className="loglot"
                         onClick={() => {
                           localStorage.removeItem("userToken");
+                          localStorage.removeItem("Token");
                           window.location.reload();
                         }}
                       >

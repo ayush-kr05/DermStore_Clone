@@ -1,12 +1,14 @@
 const express = require("express");
 const connection = require("./configs/db.js");
 const app = express();
+const cors = require("cors");
 const authRouter = require("./middlewares/auth");
 const userRouter = require("./controllers/user.controller");
 const productRouter = require("./controllers/product.controller");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 app.use("/auth", authRouter);
 app.use("/cart", userRouter);
 app.use("/products", productRouter);

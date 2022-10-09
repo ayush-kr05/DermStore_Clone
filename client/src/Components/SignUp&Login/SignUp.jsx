@@ -27,7 +27,15 @@ export const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://ayush05.herokuapp.com/dermuserinfo", formData);
+    // console.log(formData);
+    const data = await axios.post(
+      "http://localhost:8080/auth/signUp",
+      formData
+    );
+    // console.log(user);
+    if (data.data.message) {
+      alert(`${data.data.message}, Please Login!`);
+    }
 
     setFormData(initialState);
     navigate("/login");
