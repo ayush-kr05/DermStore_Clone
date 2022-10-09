@@ -103,15 +103,32 @@ cart.delete('/:id', async (req, res) => {
         const { id } = req.params;
         const { itemid, cartitemid } = req.query;
         console.log(itemid, cartitemid, id)
-        const cartdata = await cartmodel.updateOne({ _id: id, "cartItems.id": itemid }, { $pull: { cartItems: { _id: cartitemid   } } })
+        const cartdata = await usermodel.updateOne({ _id: id, "cartItems.id": itemid }, { $pull: { cartItems: { _id: cartitemid   } } })
 console.log(cartdata);
         // await cartdata.save();
-        res.status(200).send(cartdata)
+        res.status(200).send(cartdata);
     }
     catch (error) {
         res.status(404).send(error.message);
     }
 })
+
+cart.get('/demo/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { itemid, cartitemid } = req.query;
+        console.log(itemid, cartitemid, id)
+        // const cartdata = await cartmodel.updateOne({ _id: id, "cartItems.id": itemid }, { $pull: { cartItems: { _id: cartitemid } } })
+        const cartdata = await cartmodel.find()
+        console.log(cartdata);
+        // await cartdata.save();
+        res.status(200).send(cartdata);
+    }
+    catch (error) {
+        res.status(404).send(error.message);
+    }
+})
+
 cart.get('/count', async (req, res) => {
     try {
         const cartdata = await cartmodel.countDocuments();
