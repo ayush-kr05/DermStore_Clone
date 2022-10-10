@@ -4,10 +4,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCartData, GetCartCount } from "../../Redux/action";
 import axios from "axios";
 import { Link } from "react-router-dom";
+// import * as React from 'react';
+import {Alert, rgbToHex} from '@mui/material';
 
 import "./CheckoutPage.css";
 // import { AbsoluteCenter } from "@chakra-ui/react";
 export const CheckoutPage = () => {
+  const [box,setBox]=React.useState(false)
+  const [check,setCheck]=React.useState(true)
+  const onClick = ()=>{
+    setBox(!box);
+  }
+  const onClick1 = ()=>{
+    setCheck(!check);
+  }
   const { CartData } = useSelector((state) => state);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -51,7 +61,7 @@ export const CheckoutPage = () => {
 
   return (
     <div>
-      {/* <Link to="/"> */}
+      
       <div
         className="first_di"
         style={{ display: "flex", paddingLeft: "10px" }}
@@ -94,31 +104,42 @@ export const CheckoutPage = () => {
                 onClick={() => {
                   // navigate("/login");
                 }}
+                className="btn"
               >
                 LOGIN/SIGNUP
               </button>
             </div>
           </div>
-          <hr />
+          
+
+
           <div className="first_form">
-            <h2>Checkout as a guest</h2>
+          <hr className="hero"/>
+            <h3>Checkout as a guest</h3>
             <p>
               Complete your order without signing up, or sign up after payment.
             </p>
-            <h3>1. Email and delivery address</h3>
+            <h5 className="em">1. Email and delivery address</h5>
             <form action="">
               <span>Email address</span>
               <br />
-              <input type="text" className="text" required />
-              <span>We'll send the purchase receipt to this email.</span>
-              <h3
+              <input type="text" className="text" required /><br/>
+              <span style={{fontSize:'12px'}}>We'll send the purchase receipt to this email.</span>
+              <h4
                 style={{
                   "margin-top": "3%",
                 }}
               >
                 Country/Region
-              </h3>
-              <input type="text" className="text" required />
+              </h4>
+              {/* <input type="text" className="text" required /> */}
+              <select className="text">
+                        <option>Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Britain">Britain</option>
+              </select>
               <p className="type">Full Name</p>
               <input type="text" className="text" required />
               <p className="type">Address Search</p>
@@ -127,34 +148,48 @@ export const CheckoutPage = () => {
                 className="text"
                 placeholder="Start typing your address..."
                 required
-              />
-              <p className="to_active">or Enter Address Manually</p>
-              <div className="display">
-                <p className="type">Address</p>
-                <input type="text" className="text" required />
-                <p className="type">Apartment/Suite number</p>
-                <input type="text" className="text" required />
-                <p className="type">Town/City</p>
-                <input type="text" className="text" required />
-                <p className="type">Zip Code/Postcode</p>
-                <input type="text" className="text" required />
-              </div>
+              /><br/>
+              <p className="to_active" onClick={onClick}>or Enter Address Manually</p> 
+              {
+                box?(
+               
+                  <div className="display">
+                    <p className="type" style={{marginLeft:'-15px'}}>Address</p>
+                    <input type="text" className="text" style={{marginLeft:'-15px'}} required />
+                    <p className="type" style={{marginLeft:'-15px'}}>Apartment/Suite number</p>
+                    <input type="text" className="text" style={{marginLeft:'-15px'}} required />
+                    <p className="type" style={{marginLeft:'-15px'}}>Town/City</p>
+                    <input type="text" className="text" style={{marginLeft:'-15px'}} required />
+                    <p className="type" style={{marginLeft:'-15px'}}>Zip Code/Postcode</p>
+                    <input type="text" className="text" style={{marginLeft:'-15px'}} required />
+                  </div>): ""
+                
+              }
+              
               <p className="type">Contact Number</p>
               <input type="text" className="text" required />
             </form>
           </div>
+
+
           <div className="delivery">
-            <h2>2. Select Delivery Option</h2>
+            <h2 className="lefty">2. Select Delivery Option</h2>
             <div className="box_del">
-              Please enter your address so we can calculate your delivery
-              options
+              {/* Please enter your address so we can calculate your delivery
+              options */}
+              <Alert severity="info" style={{color: 'rgb(52, 91, 235)',fontWeight:600}}> <p id="blue">Please enter your address so we can calculate your delivery
+              options</p></Alert>
+
             </div>
           </div>
+
+
+
           <div className="payment">
-            <h3>3. Select Payment Method</h3>
+            <h4 className="lefty">3. Select Payment Method</h4>
             <div className="payment_div">
               <div className="under_payment">
-                <h3>Credit/Debit Card</h3>
+                <h5>Credit/Debit Card</h5>
                 <div className="images_d">
                   <img
                     src="https://mms.businesswire.com/media/20210126006164/en/854905/5/Visa+Brand+Mark+-+Blue+-+900x291.jpg"
@@ -186,43 +221,102 @@ export const CheckoutPage = () => {
                 <p className="type">Name on card</p>
                 <input type="text" className="text" />
                 <p className="type">Expiry Date</p>
-                <input
-                  type="number"
-                  className="half_text"
-                  placeholder="Month"
-                />{" "}
-                <input type="number" className="half_text" placeholder="Year" />
+                <div className="exp">
+                  
+                  <select className="half_text">
+                    <option>Month</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  
+                  <select className="half_text">
+                    <option style={{background:'gray'}}>Year</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                  </select>
+                </div>
+
                 <p className="type">Security Code (CV2)</p>
-                <input type="number" className="half_text" />
+                <input type="number" className="half_cvv" />
                 <br />
                 <br />
-                <input
-                  type="checkbox"
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    left: "0",
-                  }}
-                />
-                Use my shipping address as my cardholder address
+                <div className="check">
+                  <div><input
+                    type="checkbox"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                    }}
+                    onClick={onClick1}
+                  />
+                  </div>
+                  
+                 <div><p style={{display:'inline',paddingLeft:"10px"}}>Use my shipping address as my cardholder address</p> </div>
+                </div>
+                {
+                  check? (
+                    <>
+                      <p className="type">Country/Region</p>
+                      <select className="text">
+                        <option>Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Britain">britain</option>
+                      </select>
+                      <p className="type" >Address Search</p>
+                      <input type="text" className="text"  placeholder="Start typing your address..." required />
+                      
+                    </>
+                  ) : null
+                }
+
               </div>
             </div>
+
+
             <div className="last_box">
               <h3>Use a different payment method</h3>
               <img
                 src="data:image/jpeg;base64,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"
-                alt=""
+                alt="" height={'30px'} width={'40px'}
               />
+              <img 
+                src="https://s1.thcdn.com/checkout/resources/images/52c235cfc21b037c320712891df2cffc.svg"
+                />
               <img
                 src="https://i.pcmag.com/imagery/reviews/068BjcjwBw0snwHIq0KNo5m-15..v1602794215.png"
                 alt=""
               />
+              <img src='https://s1.thcdn.com/checkout/resources/images/959a8e732266683b799128acf46e03fd.svg'/>
+              <img src='https://s1.thcdn.com/checkout/resources/images/5ba5f9cd0c43d9f966774630aa65d7c6.svg' height={'30px'}/>
             </div>
           </div>
-          <button onClick={handlePaymentSuccess} className="last_but">
-            SUBMIT MY ORDER
-          </button>
+
+          <div className="payDiv">
+            <button onClick={handlePaymentSuccess} className="last_but">
+              SUBMIT MY ORDER
+            </button>
+          </div>
+          
         </div>
+
 
         <div className="second_main">
           <div>
@@ -242,6 +336,8 @@ export const CheckoutPage = () => {
                 <p></p>
               </div> */}
             </div>
+
+
             <hr />
             <div className="data_div">
               <p>Delivery</p>
