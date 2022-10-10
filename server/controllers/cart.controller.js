@@ -6,9 +6,12 @@ const cart = express.Router();
 
 
 //to get cart data url 
-cart.get('/', async (req, res) => {
+cart.get('/:userId', async (req, res) => {
     try {
-        const cartdata = await cartmodel.find();
+        const { userId } = req.params;
+        const cartdata = await usermodel.find({
+            _id: userId
+        });
         res.status(200).send(cartdata)
     } catch (error) {
         res.status(404).send(error.message);
@@ -48,7 +51,7 @@ cart.patch('/inc/:id', async (req, res) => {
         const { itemid } = req.query;
         console.log(id)
         console.log(itemid)
-        let newdata = await usermodel.updateMany({ _id: id, "cartItems.id": itemid },{ $inc: { "cartItems.$.quantity": -1 } })
+        let newdata = await usermodel.updateMany({ _id: id, "cartItems._id": itemid },{ $inc: { "cartItems.$.quantity": 1 } })
         res.send(newdata).status(200)
         // db.users.updateOne({ _id: ObjectId('6340466ede6af2d810b2367e'), "cartItems.id": "10956-020" }, { $set: { "cartItems.$.quantity": 2 } })
         // db.carts.updateOne({ _id: ObjectId('634012651b299255346e8a54'), "demo.name": "vishal" }, { $set: { "demo.$.name": "vishalkarale" } })
@@ -81,7 +84,7 @@ cart.patch('/dec/:id', async (req, res) => {
         const { itemid } = req.query;
         console.log(id)
         console.log(itemid)
-        let newdata = await usermodel.updateMany({ _id: id, "cartItems.id": itemid }, { $inc: { "cartItems.$.quantity": 1 } })
+        let newdata = await usermodel.updateMany({ _id: id, "cartItems._id": itemid }, { $inc: { "cartItems.$.quantity": -1 } })
         res.send(newdata).status(200)
         // db.users.updateOne({ _id: ObjectId('6340466ede6af2d810b2367e'), "cartItems.id": "10956-020" }, { $set: { "cartItems.$.quantity": 2 } })
         // db.carts.updateOne({ _id: ObjectId('634012651b299255346e8a54'), "demo.name": "vishal" }, { $set: { "demo.$.name": "vishalkarale" } })
@@ -101,9 +104,9 @@ cart.patch('/dec/:id', async (req, res) => {
 cart.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const { itemid, cartitemid } = req.query;
-        console.log(itemid, cartitemid, id)
-        const cartdata = await usermodel.updateOne({ _id: id, "cartItems.id": itemid }, { $pull: { cartItems: { _id: cartitemid   } } })
+        const {  cartitemid } = req.query;
+        console.log(cartitemid, id)
+        const cartdata = await usermodel.updateOne({ _id: id, "cartItems._id": cartitemid }, { $pull: { cartItems: { _id: cartitemid   } } })
 console.log(cartdata);
         // await cartdata.save();
         res.status(200).send(cartdata);
@@ -113,21 +116,7 @@ console.log(cartdata);
     }
 })
 
-cart.get('/demo/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { itemid, cartitemid } = req.query;
-        console.log(itemid, cartitemid, id)
-        // const cartdata = await cartmodel.updateOne({ _id: id, "cartItems.id": itemid }, { $pull: { cartItems: { _id: cartitemid } } })
-        const cartdata = await cartmodel.find()
-        console.log(cartdata);
-        // await cartdata.save();
-        res.status(200).send(cartdata);
-    }
-    catch (error) {
-        res.status(404).send(error.message);
-    }
-})
+
 
 cart.get('/count', async (req, res) => {
     try {

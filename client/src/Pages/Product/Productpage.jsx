@@ -137,11 +137,13 @@ export const ProductPage = () => {
   };
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/cart`).then(({ data }) => {
-      dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data.length));
-      // console.log(data.length);
-    });
+    axios
+      .get(`http://localhost:8080/items/6340469bde6af2d810b23681`)
+      .then(({ data }) => {
+        dispatch(fetchCartData(data));
+        dispatch(GetCartCount(data.length));
+        // console.log(data.length);
+      });
   };
   // fetch("https://ayush05.herokuapp.com/dermcart", {
   //   method: "POST",
@@ -154,8 +156,8 @@ export const ProductPage = () => {
 
   const sendToCart = (elem) => {
     console.log(elem);
-    fetch("http://localhost:8080/cart", {
-      method: "POST",
+    fetch("http://localhost:8080/cart/6340469bde6af2d810b23681", {
+      method: "PATCH",
       headers: {
         "content-type": "application/json",
       },

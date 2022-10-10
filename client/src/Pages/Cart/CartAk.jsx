@@ -31,11 +31,12 @@ export const CartAk = () => {
 
   //getdata from api
   function getCartData() {
-    fetch("http://localhost:8080/cart")
+    fetch("http://localhost:8080/items/6340469bde6af2d810b23681")
       .then((res) => res.json())
-      .then((res) => setCartdata(res))
+      .then((res) => setCartdata(res[0].cartItems))
       .catch((err) => console.log(err));
   }
+    console.log(CartData);
 
   // function getCount() {
   //   fetch("http://localhost:8080/cart/count")
@@ -63,25 +64,36 @@ export const CartAk = () => {
   //Data Remove From Cart
 
   const removeFromCart = (id) => {
-    axios.delete(`http://localhost:8080/cart/${id}`).then(getCartData());
+    //localhost:8080/items/6340469bde6af2d810b23681?cartitemid=6343a65eee621d98e7dbb5cb
+    http: axios
+      .delete(
+        `http://localhost:8080/items/6340469bde6af2d810b23681?cartitemid=${id}`
+      )
+      .then(getCartData());
   };
 
   //Data Increase In Cart
 
   const handleIncrease = (id) => {
     console.log("increa", id);
-    fetch(`http://localhost:8080/cart/inc/${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-    }).then(getCartData())
+    fetch(
+      `http://localhost:8080/items/inc/6340469bde6af2d810b23681?itemid=${id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
   const handleDecrease = (id) => {
-    fetch(`http://localhost:8080/cart/dec/${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-    }).then(getCartData());
+    fetch(
+      `http://localhost:8080/items/dec/6340469bde6af2d810b23681?itemid=${id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
