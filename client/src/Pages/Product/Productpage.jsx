@@ -28,6 +28,11 @@ export const ProductPage = () => {
   const [savings, setSavings] = useState([]);
   const [aReviews, setAReviews] = useState([]);
   const [like, setItemlike] = useState([]);
+  const [Token, setToken] = useState("");
+
+  useEffect(() => {
+    setToken(JSON.parse(localStorage.getItem("Token")));
+  }, []);
 
   useEffect(() => {
     setCategory(Categeory.Category);
@@ -88,9 +93,9 @@ export const ProductPage = () => {
   const dispatch = useDispatch();
 
   async function getData() {
-    const data = await fetch(
-      " https://ayush05.herokuapp.com/dermproducts"
-    ).then((d) => d.json());
+    const data = await fetch("https://ayush05.herokuapp.com/dermproducts").then(
+      (d) => d.json()
+    );
     setItems(data);
     //  console.log(data);
   }
@@ -136,22 +141,47 @@ export const ProductPage = () => {
       });
   };
 
+  // const SetToReduce = () => {
+  //   axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
+  //     dispatch(fetchCartData(data));
+  //     dispatch(GetCartCount(data.length));
+  //     // console.log(data.length);
+  //   });
+  // };
   const SetToReduce = () => {
-    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
+    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
       dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data.length));
-      // console.log(data.length);
+      dispatch(GetCartCount(data[0].cartItems.length));
+      // console.log(data);
     });
+  };
+
+  const sendToCart = (elem) => {
+    console.log(elem);
+    fetch(`http://localhost:8080/cart/${Token}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(elem),
+    }).then(() => SetToReduce());
   };
 
   const handleMakeupCategory = (makeup_category) => {
     axios
       .get(
-        ` https://ayush05.herokuapp.com/dermproducts?makeup_category=${makeup_category}`
+        `https://ayush05.herokuapp.com/dermproducts?makeup_category=${makeup_category}&&`
       )
       .then(({ data }) => {
         setItems(data);
       });
+  };
+
+  const priceFilter = (low, high) => {
+    let pricecheck = items.filter((elem) => {
+      return elem.mrp >= low && elem.mrp < high;
+    });
+    setItems(pricecheck);
   };
 
   return (
@@ -217,7 +247,11 @@ export const ProductPage = () => {
             <div>
               {makeupPr.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -233,7 +267,11 @@ export const ProductPage = () => {
             <div>
               {cFormat.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -249,7 +287,11 @@ export const ProductPage = () => {
             <div>
               {cFinish.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -259,13 +301,17 @@ export const ProductPage = () => {
           </div>
           <div>
             <h4 style={{ fontSize: "20px", marginTop: "10px" }}>
-              Complexion Finish
+              Complexion Coverage
             </h4>
             <hr />
             <div>
               {cCoverage.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -281,7 +327,11 @@ export const ProductPage = () => {
             <div>
               {cTA.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -297,7 +347,11 @@ export const ProductPage = () => {
             <div>
               {cBT.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -313,7 +367,11 @@ export const ProductPage = () => {
             <div className="Lips">
               {lProducts.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div
+                    key={index}
+                    onClick={() => handleMakeupCategory(e)}
+                    className="SI"
+                  >
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -341,8 +399,11 @@ export const ProductPage = () => {
             <div>
               {price.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
-                    {/* <button></button> */}
+                  <div
+                    key={index}
+                    className="SI"
+                    onClick={() => priceFilter(50, 100)}
+                  >
                     <p>{e}</p>
                   </div>
                 );
@@ -510,13 +571,15 @@ export const ProductPage = () => {
                         alert("Added to Cart");
                         getData();
                         const data = elem;
-                        fetch("https://ayush05.herokuapp.com/dermcart", {
-                          method: "POST",
-                          headers: {
-                            "content-type": "application/json",
-                          },
-                          body: JSON.stringify(data),
-                        });
+                        //send data to cart
+                        sendToCart(elem);
+                        // fetch("https://ayush05.herokuapp.com/dermcart", {
+                        //   method: "POST",
+                        //   headers: {
+                        //     "content-type": "application/json",
+                        //   },
+                        //   body: JSON.stringify(data),
+                        // });
                         SetToReduce();
                       }}
                       className="ATC"

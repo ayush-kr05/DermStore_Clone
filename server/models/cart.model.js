@@ -1,17 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema(
-  {
-    fullName: { type: String, required: true },
-    email: { type: String, required: true },
-    password: { type: String, required: true },
-    confirmEmail: { type: String, required: true },
-    mobile: { type: Number, required: true },
-    referralCode: { type: String },
-    reward: { type: String },
-    cartItems: [
-      {
-        id: String,
+const cartSchema = new mongoose.Schema(
+    {
+        id:String,
         brand_logo_url: String,
         name: String,
         description: String,
@@ -30,12 +21,12 @@ const userSchema = new mongoose.Schema(
         item_in_cart: String,
         item_like: String,
         item_stock: String,
-      },
-    ],
-  },
-  {
-    versionKey: false,
-  }
-);
+    },
+    {
 
-module.exports = mongoose.model("users", userSchema);
+    versionKey: false,
+    timestamps: true,
+    }
+)
+
+module.exports = mongoose.model("cart", cartSchema);

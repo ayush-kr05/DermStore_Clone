@@ -37,6 +37,7 @@ export const Navbar = () => {
   const { isAuth } = useContext(AuthContext);
   const dispatch = useDispatch();
   const { CartCount } = useSelector((state) => state);
+  let Token = JSON.parse(localStorage.getItem("Token"));
 
   function handleSearch(e) {
     setSearchParam(e.target.value);
@@ -80,10 +81,10 @@ export const Navbar = () => {
   // Updating NavbarCartData
 
   const SetToReduce = () => {
-    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
+    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
       dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data.length));
-      // console.log(data.length);
+      dispatch(GetCartCount(data[0].cartItems.length));
+      // console.log(data);
     });
   };
 

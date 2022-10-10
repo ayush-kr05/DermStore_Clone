@@ -12,6 +12,7 @@ export const CheckoutPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const TotalPay = JSON.parse(localStorage.getItem("totalAmount"));
+  let Token = JSON.parse(localStorage.getItem("Token"));
   // const [cartitem, setCartitem] = React.usestate([])
   // React.useEffect(() => {
   // 	// getData();
@@ -27,20 +28,26 @@ export const CheckoutPage = () => {
   // const [paymentSucsess, setPaymentSucsesss] = React.useState(false);
 
   const SetToReduce = () => {
-    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
+    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
       dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data.length));
-      // console.log(data.length);
+      dispatch(GetCartCount(data[0].cartItems.length));
+      // console.log(data);
     });
   };
 
   const handlePaymentSuccess = () => {
-    CartData.map((ele) => {
-      axios
-        .delete(`https://ayush05.herokuapp.com/dermcart/${ele.id}`)
-        .then(SetToReduce());
-    }).then(navigate("/"));
+    axios
+      .delete(`http://localhost:8080/items/all/${Token}`)
+      .then(SetToReduce())
+      .then(navigate("/"));
   };
+
+  // const removeFromCart = (id) => {
+  //   //localhost:8080/items/6340469bde6af2d810b23681?cartitemid=6343a65eee621d98e7dbb5cb
+  //   http: axios
+  //     .delete(`http://localhost:8080/items/${Token}?cartitemid=${id}`)
+  //     .then(getCartData());
+  // };
 
   return (
     <div>

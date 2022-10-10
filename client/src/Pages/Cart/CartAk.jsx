@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { Footer } from "../../Components/Footer/Footer";
 import { useSelector } from "react-redux";
@@ -7,34 +7,58 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { fetchCartData, GetCartCount } from "../../Redux/action";
 import { useNavigate } from "react-router-dom";
+import { GET_CARTDATA } from "../../Redux/actionType";
 
 export const CartAk = () => {
-  const { CartData } = useSelector((state) => state);
-  console.log(CartData);
+  // const { CartData } = useSelector((state) => state);
+  const [CartData, setCartdata] = useState([]);
+  const [count, setCount] = useState([]);
+  // const [Token, setToken] = useState("");
+  // console.log(CartData);
+  let Token = JSON.parse(localStorage.getItem("Token"));
+
+  // console.log(Token);
   const dispatch = useDispatch();
   const [promo, setPromo] = React.useState("");
+  const [point, setPoint] = React.useState("");
   const navigate = useNavigate();
-
   let CarTotalAmount = 0;
 
   for (let i = 0; i < CartData.length; i++) {
     CarTotalAmount += CartData[i].quantity * CartData[i].mrp;
   }
 
-  // const [CarTotalAmount, setCarTotalAmount] = React.useState(CarTotalAmounti);
+  useEffect(() => {
+    getCartData();
+  }, []);
+
+  const SetToReduce = () => {
+    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
+      dispatch(fetchCartData(data));
+      dispatch(GetCartCount(data[0].cartItems.length));
+      // console.log(data);
+    });
+  };
+
+  //getdata from api
+  function getCartData() {
+    // console.log(`http://localhost:8080/items/${Token}`);
+    fetch(`http://localhost:8080/items/${Token}`)
+      .then((res) => res.json())
+      .then((res) => setCartdata(res[0].cartItems))
+      .catch((err) => console.log(err))
+      .finally(() => SetToReduce());
+  }
+
+  // function getCount() {
+  //   fetch("http://localhost:8080/cart/count")
+  //     .then((res) => res.json())
+  //     .then((res) => setCount(res));
+  // }
 
   function handlePromo(e) {
     setPromo(e.target.value);
   }
-  // console.log(promo);
-
-  const SetToReduce = () => {
-    axios.get(`https://ayush05.herokuapp.com/dermcart`).then(({ data }) => {
-      dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data.length));
-      // console.log(data.length);
-    });
-  };
 
   const MoveToPayment = () => {
     localStorage.setItem("totalAmount", CarTotalAmount);
@@ -44,19 +68,29 @@ export const CartAk = () => {
   //Data Remove From Cart
 
   const removeFromCart = (id) => {
-    axios
-      .delete(`https://ayush05.herokuapp.com/dermcart/${id}`)
-      .then(SetToReduce());
+    //localhost:8080/items/6340469bde6af2d810b23681?cartitemid=6343a65eee621d98e7dbb5cb
+    http: axios
+      .delete(`http://localhost:8080/items/${Token}?cartitemid=${id}`)
+      .then(getCartData());
   };
 
   //Data Increase In Cart
 
-  const handleIncrease = (id, prevCount) => {
-    fetch(`https://ayush05.herokuapp.com/dermcart/${id}`, {
+  const handleIncrease = (id) => {
+    console.log("increa", id);
+    fetch(`http://localhost:8080/items/inc/${Token}?itemid=${id}`, {
       method: "PATCH",
-      body: JSON.stringify({ quantity: prevCount }),
       headers: { "Content-Type": "application/json" },
-    }).then(SetToReduce());
+    }).then(getCartData());
+    setPoint(Number(CarTotalAmount / 3).toFixed(0));
+  };
+
+  const handleDecrease = (id) => {
+    fetch(`http://localhost:8080/items/dec/${Token}?itemid=${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+    }).then(getCartData());
+    setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
   return (
@@ -80,7 +114,7 @@ export const CartAk = () => {
             <tbody>
               {CartData.map((elm) => {
                 return (
-                  <tr className="CartRowMain" key={elm.id}>
+                  <tr className="CartRowMain" key={elm._id}>
                     <td className="td1">
                       <div className="td3Div">
                         <img src={elm.img_url_1} />
@@ -97,18 +131,14 @@ export const CartAk = () => {
                         <button
                           className="InceDecCartBtn"
                           disabled={elm.quantity <= 1}
-                          onClick={() =>
-                            handleIncrease(elm.id, elm.quantity - 1)
-                          }
+                          onClick={() => handleDecrease(elm._id)}
                         >
                           -
                         </button>
                         <h5>{elm.quantity}</h5>
                         <button
                           className="InceDecCartBtn"
-                          onClick={() =>
-                            handleIncrease(elm.id, elm.quantity + 1)
-                          }
+                          onClick={() => handleIncrease(elm._id)}
                         >
                           +
                         </button>
@@ -120,7 +150,7 @@ export const CartAk = () => {
                         <h5>$ {elm.quantity * elm.mrp}</h5>
                         <button
                           className="removBtn"
-                          onClick={() => removeFromCart(elm.id)}
+                          onClick={() => removeFromCart(elm._id)}
                         >
                           X
                         </button>
@@ -145,7 +175,7 @@ export const CartAk = () => {
             }}
           >
             <h5 style={{ fontWeight: "bold" }}>
-              Rewards members earn 9425 points on this order
+              Rewards members earn {point} points on this order
             </h5>
             <div style={{ display: "flex", gap: "10px", fontWeight: "bold" }}>
               <p>Cart Subtotal:</p>
