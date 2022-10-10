@@ -7,36 +7,36 @@ export const Categeory = {
          "Lips","Makeup", "Eyes","Palettes","Complexion"
     ],
     Makeup_Product_Type : [
-        "Blusher (5)",
+        "Blusher",
     ],
     Complexion_Format : [
-        "Cream (4)","Liquid (3)","Stick (7)",
+        "Cream","Liquid","Stick",
     ],
     Complexion_Finish : [
-        "Dewy (1)","Glossy (2)", "Matte (9)", "Satin (6)", 
+        "Dewy","Glossy", "Matte", "Satin", 
     ],
     Complexion_Coverage : [
-        "Buildable (7)", "Full (5)", "Medium (1)", "Sheer (3)",
+        "Buildable", "Full", "Medium", "Sheer",
     ],
     Cosmetics_TA : [
-        "Brushes (2)",
+        "Brushes",
     ],
     Cosmetics_BT : [
-        "Lip (2)",
+        "Lip",
     ],
     Lips_Products : [
-        "Lipstick (35)", "Liquid Lipstick (4)", "Lip Gloss (3)", "Lip Stain & Tint (3)", "Lip Plumper (1)", "Tinted Lip Balm (1)", 
+        "Lipstick", "Liquid Lipstick", "Lip Gloss", "Lip Stain & Tint", "Lip Plumper", "Tinted Lip Balm", 
     ],
     Preferences : [
-        "Certified Cruelty-Free (22)", "Certified Organic (6)", "Clean (13)", "Fragrance-Free (4)", "Gluten-Free (12)", "Hypoallergenic (4)", "Natural (5)", "Non-Comedogenic", "Paraben-Free (10)", "Phthalate-Free (11)", "Sulfate-Free (11)", "Vegan (10)",
+        "Certified Cruelty-Free", "Certified Organic", "Clean", "Fragrance-Free", "Gluten-Free", "Hypoallergenic", "Natural", "Non-Comedogenic", "Paraben-Free", "Phthalate-Free", "Sulfate-Free", "Vegan",
     ],
     Price : [
-        "$10 - $25 (11)","$25 - $50 (25)","78",
+        '${10} - $2',`$25 - $50`,
     ],
     Savings : [
-        "Up to 25% (2)", "25% - 50% (1)", 
+        "Up to 25%", "25% - 50%", 
     ],
     Average_Reviews : [
-        "4+ (27)",
+        "4+",
     ],
 }

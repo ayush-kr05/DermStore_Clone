@@ -89,7 +89,7 @@ export const ProductPage = () => {
 
   async function getData() {
     const data = await fetch(
-      "http://localhost:8080/products"
+      "https://ayush05.herokuapp.com/dermproducts"
     ).then((d) => d.json());
     setItems(data);
     //  console.log(data);
@@ -111,7 +111,6 @@ export const ProductPage = () => {
       console.log(d);
       setItems(d);
     }
-  funct
 
     if (e.target.value == "ATZ") {
       const d = [...items].sort((a, b) => {
@@ -148,12 +147,19 @@ export const ProductPage = () => {
   const handleMakeupCategory = (makeup_category) => {
     axios
       .get(
-        ` https://ayush05.herokuapp.com/dermproducts?makeup_category=${makeup_category}`
+        `https://ayush05.herokuapp.com/dermproducts?makeup_category=${makeup_category}&&`
       )
       .then(({ data }) => {
         setItems(data);
       });
   };
+
+  const priceFilter = (low, high)=>{
+    let pricecheck = items.filter((elem)=>{
+      return elem.mrp >= low && elem.mrp<high;
+    })
+    setItems(pricecheck);
+  }
 
   return (
     <div>
@@ -218,7 +224,9 @@ export const ProductPage = () => {
             <div>
               {makeupPr.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index}
+                  onClick={() => handleMakeupCategory(e)}
+                   className="SI">
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -234,7 +242,10 @@ export const ProductPage = () => {
             <div>
               {cFormat.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index}
+                  onClick={() => handleMakeupCategory(e)}
+                   className="SI">
+                    
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -250,7 +261,7 @@ export const ProductPage = () => {
             <div>
               {cFinish.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index} onClick={() => handleMakeupCategory(e)} className="SI">
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -260,13 +271,13 @@ export const ProductPage = () => {
           </div>
           <div>
             <h4 style={{ fontSize: "20px", marginTop: "10px" }}>
-              Complexion Finish
+              Complexion Coverage
             </h4>
             <hr />
             <div>
               {cCoverage.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index} onClick={() => handleMakeupCategory(e)} className="SI">
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -282,7 +293,9 @@ export const ProductPage = () => {
             <div>
               {cTA.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index}
+                  onClick={() => handleMakeupCategory(e)}
+                   className="SI">
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -298,7 +311,9 @@ export const ProductPage = () => {
             <div>
               {cBT.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index}
+                  onClick={() => handleMakeupCategory(e)}
+                   className="SI">
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -314,7 +329,9 @@ export const ProductPage = () => {
             <div className="Lips">
               {lProducts.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
+                  <div key={index} 
+                  onClick={() => handleMakeupCategory(e)}
+                   className="SI">
                     {/* <button></button> */}
                     <p>{e}</p>
                   </div>
@@ -342,8 +359,9 @@ export const ProductPage = () => {
             <div>
               {price.map((e, index) => {
                 return (
-                  <div key={index} className="SI">
-                    {/* <button></button> */}
+                  <div key={index} className="SI"
+                    onClick={()=>priceFilter(50, 100)}
+                    >
                     <p>{e}</p>
                   </div>
                 );
