@@ -1,8 +1,8 @@
-*{
+/* *{
   margin:0px;
   padding:0px;
   box-sizing: border-box;
-}
+} */
 .first_di {
   width: 100%;
   height: 80px;
@@ -24,7 +24,6 @@
   height: auto;
   padding-bottom: 14%;
 }
-
 
 .first_main {
   margin-left: 0%; /*it was 6*/
@@ -57,7 +56,7 @@
   width: 100%;
   margin-top: 40%;
   height: 40px;
-  
+
   margin-left: 70%;
   background-color: black;
   color: white;
@@ -84,14 +83,13 @@
   font-size: 20px;
   margin-bottom: 2%;
 }
-.em{
+.em {
   padding-left: 10px;
 }
 .first_form > h3 {
   margin-left: 2%;
   /* font-weight: bold; */
   margin-top: 3%;
-  
 }
 
 .first_form > form {
@@ -102,7 +100,6 @@
   margin-top: -2%;
   width: 95%;
   height: 30px;
-  
 }
 .first_form > span {
   margin-top: 5%;
@@ -132,7 +129,7 @@
   border: 1px solid blue;
   background-color: white;
 }
-.lefty{
+.lefty {
   text-align: left;
   padding-left: 20px;
 }
@@ -151,7 +148,6 @@
   background-color: #e6f0f8;
   text-align: center;
   text-decoration: solid;
-  
 }
 
 .payment {
@@ -168,7 +164,9 @@
   margin-left: 5%;
   border: 2px solid black;
   height: 65%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .under_payment {
   margin-left: 2%;
@@ -192,7 +190,7 @@
   margin-top: 2%;
   height: 10%;
 }
-.under_payment >.type{
+.under_payment > .type {
   text-align: left;
   margin-left: 15px;
 }
@@ -202,25 +200,25 @@
   height: 30px;
   margin-top: 2%;
 }
-.exp{
+.exp {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.half_cvv{
+.half_cvv {
   width: 40%;
   height: 30px;
   margin-top: 2%;
-  margin-left:-53%;
+  margin-left: -53%;
   justify-self: flex-start;
 }
-.check{
+.check {
   text-align: left;
   padding-left: 20px;
   margin: block;
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 .last_box {
@@ -245,13 +243,13 @@
   font-size: 20px;
   cursor: pointer;
 }
-.last_but:hover{
+.last_but:hover {
   background-color: rgba(20, 19, 19, 0.779);
   color: white;
   outline: none;
   border: none;
 }
-.payDiv{
+.payDiv {
   width: 100%;
   height: auto;
   margin-top: 3%;
@@ -259,23 +257,22 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-
-
-
 .second_main {
   margin-top: 2%;
   margin-left: 4%;
-  
+  overflow: scroll;
   border: 1px solid black;
   background-color: white;
   position: fixed;
-  right:70px;
-  top:85px;
-  height:auto;
+  right: 70px;
+  top: 85px;
+  bottom: 10px;
+  height: auto;
   width: 300px;
 }
-
-
+.second_main::-webkit-scrollbar {
+  display: none;
+}
 
 .second_main > div {
   margin-top: 4%;
@@ -289,10 +286,12 @@
 }
 .store_items_list {
   width: 90%;
-  height: 80%;
-  border: 1px solid black;
+  height: auto;
+  /* border: 1px solid black; */
   margin-left: 5%;
   margin-top: 7%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .data_div {
   display: flex;
@@ -311,9 +310,8 @@
   margin-left: 60px;
 }
 
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

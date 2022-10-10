@@ -24,13 +24,13 @@ export const CartAk = () => {
   const navigate = useNavigate();
   let CarTotalAmount = 0;
 
-  for (let i = 0; i < CartData.length; i++) {
-    CarTotalAmount += CartData[i].quantity * CartData[i].mrp;
-  }
-
   useEffect(() => {
     getCartData();
   }, []);
+
+  for (let i = 0; i < CartData.length; i++) {
+    CarTotalAmount += CartData[i].quantity * CartData[i].mrp;
+  }
 
   const SetToReduce = () => {
     axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
@@ -92,6 +92,14 @@ export const CartAk = () => {
     }).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
+
+  // const applyDiscout = () => {
+  //   if (promo == "masai30") {
+  //     CarTotalAmount = Math.ceil(CarTotalAmount * 0.7);
+  //   } else {
+  //     alert("Wrong Promo Code");
+  //   }
+  // };
 
   return (
     <>

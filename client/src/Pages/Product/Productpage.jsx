@@ -9,7 +9,9 @@ import { Footer } from "../../Components/Footer/Footer";
 // import Navbar from "../Navbar/Navbar";
 import { Categeory } from "./categeory";
 import { useDispatch } from "react-redux";
+import { useContext } from "react";
 import "./product.css";
+import { AuthContext } from "../../Components/Context/AuthContextProvider";
 import { fetchCartData, GetCartCount } from "../../Redux/action";
 
 export const ProductPage = () => {
@@ -29,6 +31,7 @@ export const ProductPage = () => {
   const [aReviews, setAReviews] = useState([]);
   const [like, setItemlike] = useState([]);
   const [Token, setToken] = useState("");
+  const { isAuth } = useContext(AuthContext);
 
   useEffect(() => {
     setToken(JSON.parse(localStorage.getItem("Token")));
@@ -157,7 +160,12 @@ export const ProductPage = () => {
   };
 
   const sendToCart = (elem) => {
-    console.log(elem);
+    // console.log(elem);
+    if (!isAuth) {
+      alert("Please login");
+      return;
+    }
+    alert("Added to Cart");
     fetch(`http://localhost:8080/cart/${Token}`, {
       method: "PATCH",
       headers: {
@@ -568,7 +576,6 @@ export const ProductPage = () => {
                         fontSize: "18px",
                       }}
                       onClick={() => {
-                        alert("Added to Cart");
                         getData();
                         const data = elem;
                         //send data to cart
