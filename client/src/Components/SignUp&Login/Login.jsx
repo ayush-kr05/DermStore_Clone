@@ -47,7 +47,7 @@ export const Login = () => {
     event.preventDefault();
     // let flag = false;
     const { data } = await axios.post(
-      "http://localhost:8080/auth/login",
+      " https://dermstore-server-ayush.herokuapp.com/auth/login",
       loginData
     );
     if (data.token) {

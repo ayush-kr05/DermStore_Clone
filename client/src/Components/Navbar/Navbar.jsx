@@ -81,11 +81,13 @@ export const Navbar = () => {
   // Updating NavbarCartData
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
-      dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data[0].cartItems.length));
-      // console.log(data);
-    });
+    axios
+      .get(`https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .then(({ data }) => {
+        dispatch(fetchCartData(data));
+        dispatch(GetCartCount(data[0].cartItems.length));
+        // console.log(data);
+      });
   };
 
   React.useEffect(() => {

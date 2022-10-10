@@ -43,16 +43,18 @@ export const CheckoutPage = () => {
   }, []);
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
-      dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data[0].cartItems.length));
-      // console.log(data);
-    });
+    axios
+      .get(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .then(({ data }) => {
+        dispatch(fetchCartData(data));
+        dispatch(GetCartCount(data[0].cartItems.length));
+        // console.log(data);
+      });
   };
 
   function getCartData() {
-    // console.log(`http://localhost:8080/items/${Token}`);
-    fetch(`http://localhost:8080/items/${Token}`)
+    // console.log(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`);
+    fetch(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
       .then((res) => res.json())
       .then((res) => setCartdata(res[0].cartItems))
       .catch((err) => console.log(err))
@@ -60,8 +62,11 @@ export const CheckoutPage = () => {
   }
 
   const handlePaymentSuccess = () => {
+    alert("Your Order is Successfully Placed");
     axios
-      .delete(`http://localhost:8080/items/all/${Token}`)
+      .delete(
+        ` https://dermstore-server-ayush.herokuapp.com/items/all/${Token}`
+      )
       .then(SetToReduce())
       .then(navigate("/"));
   };
@@ -69,7 +74,7 @@ export const CheckoutPage = () => {
   // const removeFromCart = (id) => {
   //   //localhost:8080/items/6340469bde6af2d810b23681?cartitemid=6343a65eee621d98e7dbb5cb
   //   http: axios
-  //     .delete(`http://localhost:8080/items/${Token}?cartitemid=${id}`)
+  //     .delete(` https://dermstore-server-ayush.herokuapp.com/items/${Token}?cartitemid=${id}`)
   //     .then(getCartData());
   // };
 

@@ -33,17 +33,19 @@ export const CartAk = () => {
   }
 
   const SetToReduce = () => {
-    axios.get(`http://localhost:8080/items/${Token}`).then(({ data }) => {
-      dispatch(fetchCartData(data));
-      dispatch(GetCartCount(data[0].cartItems.length));
-      // console.log(data);
-    });
+    axios
+      .get(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .then(({ data }) => {
+        dispatch(fetchCartData(data));
+        dispatch(GetCartCount(data[0].cartItems.length));
+        // console.log(data);
+      });
   };
 
   //getdata from api
   function getCartData() {
-    // console.log(`http://localhost:8080/items/${Token}`);
-    fetch(`http://localhost:8080/items/${Token}`)
+    // console.log(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`);
+    fetch(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
       .then((res) => res.json())
       .then((res) => setCartdata(res[0].cartItems))
       .catch((err) => console.log(err))
@@ -51,7 +53,7 @@ export const CartAk = () => {
   }
 
   // function getCount() {
-  //   fetch("http://localhost:8080/cart/count")
+  //   fetch(" https://dermstore-server-ayush.herokuapp.com/cart/count")
   //     .then((res) => res.json())
   //     .then((res) => setCount(res));
   // }
@@ -70,7 +72,9 @@ export const CartAk = () => {
   const removeFromCart = (id) => {
     //localhost:8080/items/6340469bde6af2d810b23681?cartitemid=6343a65eee621d98e7dbb5cb
     http: axios
-      .delete(`http://localhost:8080/items/${Token}?cartitemid=${id}`)
+      .delete(
+        ` https://dermstore-server-ayush.herokuapp.com/items/${Token}?cartitemid=${id}`
+      )
       .then(getCartData());
   };
 
@@ -78,18 +82,24 @@ export const CartAk = () => {
 
   const handleIncrease = (id) => {
     console.log("increa", id);
-    fetch(`http://localhost:8080/items/inc/${Token}?itemid=${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-    }).then(getCartData());
+    fetch(
+      ` https://dermstore-server-ayush.herokuapp.com/items/inc/${Token}?itemid=${id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
   const handleDecrease = (id) => {
-    fetch(`http://localhost:8080/items/dec/${Token}?itemid=${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-    }).then(getCartData());
+    fetch(
+      `https://dermstore-server-ayush.herokuapp.com/items/dec/${Token}?itemid=${id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
