@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// products schema
 const productSchema = new mongoose.Schema(
   {
     id: String,
