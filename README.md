@@ -71,9 +71,9 @@ This is the Checkout page, which is the last page of the website. The user will 
 ## Team Members
 
 > ### • [Ayush Kumar](https://github.com/ayush-kr05)
+> ### • [Rupesh Karale](https://github.com/rupeshkarale)
 > ### • [Vaibhav Suryawanshi](https://github.com/Vaibhav3534)
 > ### • [Krishna Chaturvedi](https://github.com/krishnachaturvedi1901)
-> ### • [Yashasvi Vij](https://github.com/yashasvij-19)
 > ### • [Md Talib](https://github.com/talib789)
 
 
