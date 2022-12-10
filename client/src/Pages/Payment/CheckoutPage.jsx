@@ -44,7 +44,7 @@ export const CheckoutPage = () => {
 
   const SetToReduce = () => {
     axios
-      .get(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .get(` https://dermstore.cyclic.app/items/${Token}`)
       .then(({ data }) => {
         dispatch(fetchCartData(data));
         dispatch(GetCartCount(data[0].cartItems.length));
@@ -54,7 +54,7 @@ export const CheckoutPage = () => {
 
   function getCartData() {
     // console.log(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`);
-    fetch(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+    fetch(` https://dermstore.cyclic.app/items/${Token}`)
       .then((res) => res.json())
       .then((res) => setCartdata(res[0].cartItems))
       .catch((err) => console.log(err))
@@ -64,9 +64,7 @@ export const CheckoutPage = () => {
   const handlePaymentSuccess = () => {
     alert("Your Order is Successfully Placed");
     axios
-      .delete(
-        ` https://dermstore-server-ayush.herokuapp.com/items/all/${Token}`
-      )
+      .delete(` https://dermstore.cyclic.app/items/all/${Token}`)
       .then(SetToReduce())
       .then(navigate("/"));
   };

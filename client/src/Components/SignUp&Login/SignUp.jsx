@@ -29,7 +29,7 @@ export const SignUp = () => {
     e.preventDefault();
     // console.log(formData);
     const data = await axios.post(
-      " https://dermstore-server-ayush.herokuapp.com/auth/signUp",
+      "https://dermstore.cyclic.app/auth/signUp",
       formData
     );
     // console.log(user);

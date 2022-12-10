@@ -96,9 +96,9 @@ export const ProductPage = () => {
   const dispatch = useDispatch();
 
   async function getData() {
-    const data = await fetch("https://ayush05.herokuapp.com/dermproducts").then(
-      (d) => d.json()
-    );
+    const data = await fetch(
+      "https://dermstoreproducts.cyclic.app/dermproducts"
+    ).then((d) => d.json());
     setItems(data);
     //  console.log(data);
   }
@@ -136,7 +136,7 @@ export const ProductPage = () => {
   const handleItemCategory = (category) => {
     axios
       .get(
-        ` https://ayush05.herokuapp.com/dermproducts?item_category=${category}`
+        ` https://dermstoreproducts.cyclic.app/dermproducts?item_category=${category}`
       )
       .then(({ data }) => {
         console.log(data);
@@ -153,7 +153,7 @@ export const ProductPage = () => {
   // };
   const SetToReduce = () => {
     axios
-      .get(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .get(`https://dermstore.cyclic.app/items/${Token}`)
       .then(({ data }) => {
         dispatch(fetchCartData(data));
         dispatch(GetCartCount(data[0].cartItems.length));
@@ -168,7 +168,7 @@ export const ProductPage = () => {
       return;
     }
     alert("Added to Cart");
-    fetch(` https://dermstore-server-ayush.herokuapp.com/cart/${Token}`, {
+    fetch(`https://dermstore.cyclic.app/cart/${Token}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -180,7 +180,7 @@ export const ProductPage = () => {
   const handleMakeupCategory = (makeup_category) => {
     axios
       .get(
-        `https://ayush05.herokuapp.com/dermproducts?makeup_category=${makeup_category}&&`
+        `https://dermstoreproducts.cyclic.app/dermproducts?makeup_category=${makeup_category}&&`
       )
       .then(({ data }) => {
         setItems(data);

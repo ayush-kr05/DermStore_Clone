@@ -7,7 +7,7 @@ import { ProductOverview } from "./Pages/Product_Overview/ProductOverview";
 import { Login } from "./Components/SignUp&Login/Login";
 import { SignUp } from "./Components/SignUp&Login/SignUp";
 import { ProductPage } from "./Pages/Product/Productpage";
-/// import Cart from "./Pages/Cart/Cart";
+// import Cart from "./Pages/Cart/Cart";
 // import { PaymentPage } from "./Pages/Payment/PaymentPage";
 import { CartAk } from "./Pages/Cart/CartAk";
 // import { Payment } from "./Pages/Payment/Payment";

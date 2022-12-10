@@ -61,7 +61,9 @@ export const Navbar = () => {
   }
 
   const getSearchData = (param) => {
-    fetch(`https://ayush05.herokuapp.com/dermproducts?q=${param}&_limit=5`)
+    fetch(
+      `https://dermstoreproducts.cyclic.app/dermproducts?q=${param}&_limit=5`
+    )
       .then((res) => res.json())
       .then((res) => setSearchData(res))
       .catch((error) => console.log(error));
@@ -82,7 +84,7 @@ export const Navbar = () => {
 
   const SetToReduce = () => {
     axios
-      .get(`https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .get(`https://dermstore.cyclic.app/items/${Token}`)
       .then(({ data }) => {
         dispatch(fetchCartData(data));
         dispatch(GetCartCount(data[0].cartItems.length));

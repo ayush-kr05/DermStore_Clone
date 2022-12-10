@@ -34,7 +34,7 @@ export const CartAk = () => {
 
   const SetToReduce = () => {
     axios
-      .get(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+      .get(`https://dermstore.cyclic.app/items/${Token}`)
       .then(({ data }) => {
         dispatch(fetchCartData(data));
         dispatch(GetCartCount(data[0].cartItems.length));
@@ -45,7 +45,7 @@ export const CartAk = () => {
   //getdata from api
   function getCartData() {
     // console.log(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`);
-    fetch(` https://dermstore-server-ayush.herokuapp.com/items/${Token}`)
+    fetch(` https://dermstore.cyclic.app/items/${Token}`)
       .then((res) => res.json())
       .then((res) => setCartdata(res[0].cartItems))
       .catch((err) => console.log(err))
@@ -72,9 +72,7 @@ export const CartAk = () => {
   const removeFromCart = (id) => {
     //localhost:8080/items/6340469bde6af2d810b23681?cartitemid=6343a65eee621d98e7dbb5cb
     http: axios
-      .delete(
-        ` https://dermstore-server-ayush.herokuapp.com/items/${Token}?cartitemid=${id}`
-      )
+      .delete(` https://dermstore.cyclic.app/items/${Token}?cartitemid=${id}`)
       .then(getCartData());
   };
 
@@ -82,24 +80,18 @@ export const CartAk = () => {
 
   const handleIncrease = (id) => {
     console.log("increa", id);
-    fetch(
-      ` https://dermstore-server-ayush.herokuapp.com/items/inc/${Token}?itemid=${id}`,
-      {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-      }
-    ).then(getCartData());
+    fetch(` https://dermstore.cyclic.app/items/inc/${Token}?itemid=${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+    }).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 
   const handleDecrease = (id) => {
-    fetch(
-      `https://dermstore-server-ayush.herokuapp.com/items/dec/${Token}?itemid=${id}`,
-      {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-      }
-    ).then(getCartData());
+    fetch(`https://dermstore.cyclic.app/items/dec/${Token}?itemid=${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+    }).then(getCartData());
     setPoint(Number(CarTotalAmount / 3).toFixed(0));
   };
 

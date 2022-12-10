@@ -23,7 +23,7 @@ export const ProductOverview = () => {
   const [data, setData] = React.useState({});
 
   const getSearchData = () => {
-    fetch(`https://ayush05.herokuapp.com/dermproducts?q=${id}`)
+    fetch(`https://dermstoreproducts.cyclic.app/dermproducts?q=${id}`)
       .then((res) => res.json())
       .then((res) => setData(res[0]))
       .catch((error) => console.log(error));
